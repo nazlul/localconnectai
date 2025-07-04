@@ -18,8 +18,7 @@ export default function Contact() {
           style={{ '--animation-delay': '1.0s' } as React.CSSProperties}
         >
           Whether you&apos;re a visionary ready to join our core team, a financial institution interested in a pilot program,
-          or a strategic partner seeking to collaborate, we want to hear from you. Your expertise and passion can shape
-          the future of financial integrity.
+          or a strategic partner seeking to collaborate, we want to hear from you. Your expertise and passion can help shape the future of financial integrity.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-stretch space-y-10 md:space-y-0 md:space-x-12">
@@ -44,7 +43,7 @@ export default function Contact() {
                   </a>
                 </p>
                 <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <i className="fas fa-phone-alt text-cyan-400 text-2xl mr-3" />
+                  <i className="fa-solid fa-phone-volume text-cyan-400 text-2xl mr-3" />
                   <a href="tel:+27641356433" className="hover:text-cyan-400 transition">
                     064 135 6433
                   </a>
@@ -86,7 +85,7 @@ export default function Contact() {
                 target="_blank"
                 className="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-md"
               >
-                <i className="fas fa-paper-plane mr-3" /> Email Us
+                <i className="fas fa-envelope mr-3" /> Email Us
               </a>
             </div>
           </div>
