@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 export default function Contact() {
   return (
     <section
@@ -13,13 +11,13 @@ export default function Contact() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent animate-fade-in-scale-up"
           style={{ '--animation-delay': '0.8s' } as React.CSSProperties}
         >
-          Let's Connect & Build
+          Let&apos;s Connect & Build
         </h2>
         <p
           className="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-90 font-light animate-fade-in-scale-up"
           style={{ '--animation-delay': '1.0s' } as React.CSSProperties}
         >
-          Whether you're a visionary ready to join our core team, a financial institution interested in a pilot program,
+          Whether you&apos;re a visionary ready to join our core team, a financial institution interested in a pilot program,
           or a strategic partner seeking to collaborate, we want to hear from you. Your expertise and passion can shape
           the future of financial integrity.
         </p>

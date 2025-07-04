@@ -11,7 +11,7 @@ export default function Mission() {
           Our Mission: A Resilient Financial Future
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-5xl mx-auto leading-relaxed font-light">
-          South Africa is under siege by escalating financial crime, costing billions and impacting our global standing. At LocalConnect AI, our unwavering mission is to fundamentally transform how financial crime is fought. We aim to move beyond reactive measures, building an intelligent, proactive, and interconnected ecosystem that safeguards our nation's financial integrity, empowers institutions, and fosters a legacy of trust and prosperity.
+          South Africa is under siege by escalating financial crime, costing billions and impacting our global standing. At LocalConnect AI, our unwavering mission is to fundamentally transform how financial crime is fought. We aim to move beyond reactive measures, building an intelligent, proactive, and interconnected ecosystem that safeguards our nation&apos;s financial integrity, empowers institutions, and fosters a legacy of trust and prosperity.
         </p>
       </div>
     </section>

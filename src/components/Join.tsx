@@ -59,7 +59,7 @@ export default function Join() {
         </h2>
 
         <p className="text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light animate-fade-in-scale-up">
-          LocalConnect AI is more than a startup; it's a commitment to safeguarding South Africa's financial future. We're seeking visionary co-founders and core team members who are ready to make a profound impact with cutting-edge AI and own their part of this monumental journey.
+          LocalConnect AI is more than a startup; it&apos;s a commitment to safeguarding South Africa&apos;s financial future. We&apos;re seeking visionary co-founders and core team members who are ready to make a profound impact with cutting-edge AI and own their part of this monumental journey.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 mb-16">
@@ -80,7 +80,7 @@ export default function Join() {
         </div>
 
         <p className="text-xl md:text-2xl mb-12 opacity-90 font-light animate-fade-in-scale-up">
-          This is a singular opportunity for significant early equity and to redefine a nation's financial security for generations to come.
+          This is a singular opportunity for significant early equity and to redefine a nation&apos;s financial security for generations to come.
         </p>
         <Link
           href="#contact"

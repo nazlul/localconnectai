@@ -76,7 +76,7 @@ export default function Solution() {
                 Explainable AI (XAI)
               </h3>
               <p className="text-gray-300 text-center leading-relaxed font-light">
-                Our AI doesn't just flag anomalies; it provides crystal-clear,
+                Our AI doesn&apos;t just flag anomalies; it provides crystal-clear,
                 human-readable explanations, empowering analysts to make
                 faster, more informed decisions and generate fully compliant
                 reports.
@@ -114,7 +114,7 @@ export default function Solution() {
               <p className="text-gray-300 text-center leading-relaxed font-light">
                 Transforming tedious compliance into an intuitive and rewarding
                 experience through engaging interfaces, challenges, and
-                'Anomaly Hunter' gamification elements, attracting top analytical
+                &apos;Anomaly Hunter&apos; gamification elements, attracting top analytical
                 talent.
               </p>
             </div>
