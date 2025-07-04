@@ -41,7 +41,7 @@ export default function Problem() {
                 FATF Greylisting Burden
               </h3>
               <p className="text-gray-300 text-center leading-relaxed font-light text-base sm:text-lg">
-                South Africa's greylisting pressures financial institutions to urgently enhance their AML/CTF capabilities, demanding robust and sophisticated solutions.
+                South Africa&apos;s greylisting pressures financial institutions to urgently enhance their AML/CTF capabilities, demanding robust and sophisticated solutions.
               </p>
             </div>
           </div>
