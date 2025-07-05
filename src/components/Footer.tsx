@@ -37,7 +37,12 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center gap-10 mb-8 text-2xl sm:text-3xl text-gray-400">
-          <a href="#" className="hover:text-cyan-400 transition" aria-label="X">
+          <a 
+            href="https://x.com/LocalConnectAi" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition" 
+            aria-label="X">
             <i className="fab fa-x-twitter"></i>
           </a>
           <a
@@ -49,10 +54,19 @@ export default function Footer() {
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" className="hover:text-cyan-400 transition" aria-label="Telegram">
+          <a 
+            href="#" 
+            rel="noopener noreferrer" 
+            className="hover:text-cyan-400 transition"
+            aria-label="Telegram">
             <i className="fab fa-telegram-plane"></i>
           </a>
-          <a href="https://www.instagram.com/localconnect_ai/" target="_blank" className="hover:text-cyan-400 transition" aria-label="Instagram">
+          <a 
+            href="https://www.instagram.com/localconnect_ai/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-cyan-400 transition" 
+            aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
         </div>
