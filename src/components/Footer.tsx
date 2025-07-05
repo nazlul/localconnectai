@@ -52,7 +52,7 @@ export default function Footer() {
           <a href="#" className="hover:text-cyan-400 transition" aria-label="Telegram">
             <i className="fab fa-telegram-plane"></i>
           </a>
-          <a href="#" className="hover:text-cyan-400 transition" aria-label="Instagram">
+          <a href="https://www.instagram.com/localconnect_ai/" target="_blank" className="hover:text-cyan-400 transition" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
         </div>
