@@ -1,136 +1,150 @@
 'use client'
 
+import { useState, useRef } from 'react'
+import { motion } from 'framer-motion'
+
+type Card = {
+  icon: string
+  title: string
+  description1: string
+  description2: string
+  color: string
+  ring: string
+  shadow: string
+}
+
+const cards: Card[] = [
+  {
+    icon: '🧠',
+    title: 'Predictive Anomaly Detection',
+    description1: 'Our AI learns complex patterns to detect suspicious activities with high accuracy.',
+    description2:
+      'Using deep learning, our AI continuously adapts to evolving criminal behavior by analyzing transaction metadata, velocity patterns, and behavioral biometrics. This system reduces false positives while catching nuanced fraud attempts previously missed by rule-based systems. Institutions benefit from higher detection rates and improved compliance workflows.',
+    color: 'border-cyan-500',
+    ring: 'hover:ring-cyan-400',
+    shadow: 'hover:shadow-cyan-500/40',
+  },
+  {
+    icon: '🕸️',
+    title: 'Network Intelligence (GNNs)',
+    description1: 'Uncover hidden criminal structures by analyzing complex networks.',
+    description2:
+      'Graph Neural Networks model transactional ecosystems as interconnected graphs, revealing links between shell accounts, mules, and laundering rings. Our engine visualizes these connections with risk weights and propagates intelligence across nodes, identifying fraud rings before they act. This capability is essential in targeting coordinated, large-scale financial crime.',
+    color: 'border-teal-500',
+    ring: 'hover:ring-teal-400',
+    shadow: 'hover:shadow-teal-500/40',
+  },
+  {
+    icon: '🔮',
+    title: 'Proactive Threat Simulation',
+    description1: 'Simulate evolving fraud and laundering techniques before they hit.',
+    description2:
+      'Generative AI models create synthetic threats based on emerging typologies, simulating next-gen attack vectors including AI-assisted laundering and cross-chain obfuscation. This proactive defense framework trains your team and systems against unseen threats, giving your institution a strategic head start against sophisticated adversaries.',
+    color: 'border-purple-500',
+    ring: 'hover:ring-purple-400',
+    shadow: 'hover:shadow-purple-500/40',
+  },
+  {
+    icon: '💡',
+    title: 'Explainable AI (XAI)',
+    description1: 'Get clear, human-readable explanations for every flagged anomaly.',
+    description2:
+      'Our XAI modules convert raw model predictions into readable justifications using natural language, graphs, and scoring metrics. Analysts can instantly understand “why” an alert was raised—ensuring trust, speed, and full auditability in high-stakes environments like KYC, AML, and regulatory reporting.',
+    color: 'border-emerald-500',
+    ring: 'hover:ring-emerald-400',
+    shadow: 'hover:shadow-emerald-500/40',
+  },
+  {
+    icon: '🤝',
+    title: 'Privacy-Preserving Collaboration',
+    description1: 'Enable secure collaboration without exposing private data.',
+    description2:
+      'Our blockchain-backed zero-knowledge layer enables multiple institutions to share signals, flags, and behavior patterns anonymously and immutably. Threats that cross borders or entities can now be tackled collectively, with no risk of data leaks or privacy violations.',
+    color: 'border-blue-500',
+    ring: 'hover:ring-blue-400',
+    shadow: 'hover:shadow-blue-500/40',
+  },
+  {
+    icon: '🎮',
+    title: 'Gamified Compliance',
+    description1: 'Make compliance intuitive, rewarding, and engaging.',
+    description2:
+      'Our platform introduces gamification into analyst workflows through point-based systems, progress bars, live leaderboards, and achievement badges. Designed to reduce fatigue and enhance performance, it transforms compliance from a checkbox task into an engaging and motivating challenge.',
+    color: 'border-pink-500',
+    ring: 'hover:ring-pink-400',
+    shadow: 'hover:shadow-pink-500/40',
+  },
+]
+
 export default function Solution() {
+  const [activeCard, setActiveCard] = useState<Card | null>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
   return (
     <section
       id="solution"
-      className="py-24 px-6 bg-[#162131] text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4"
+      className="py-24 px-6 bg-[#162131] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 relative"
     >
-      <div className="container mx-auto text-center">
-        <h2
-          className="text-5xl lg:text-6xl font-bold mb-20 gradient-text bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text animate-fade-in-scale-up"
-          style={{ '--animation-delay': '0.4s' } as React.CSSProperties}
-        >
+      <div className="container mx-auto text-center relative z-10">
+        <h2 className="text-5xl lg:text-6xl font-bold mb-20 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">
           Our Solution: Intelligent, Proactive, Connected AI
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-cyan-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(14,165,233,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '0.6s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-cyan-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-cyan-400 text-center icon-bounce-on-hover">🧠</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Predictive Anomaly Detection
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Move beyond static rules. Our AI learns dynamic, complex
-                patterns to identify suspicious activities with far greater
-                accuracy and minimal false positives.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-teal-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(20,184,166,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '0.8s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-teal-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-teal-400 text-center icon-bounce-on-hover">🕸️</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Network Intelligence (GNNs)
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Uncover hidden criminal organizations and complex illicit
-                networks by mapping and analyzing intricate relationships
-                between accounts, individuals, and transactions.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-purple-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '1.0s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-purple-400 text-center icon-bounce-on-hover">🔮</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Proactive Threat Simulation
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Leveraging advanced Generative AI, we simulate novel money
-                laundering and fraud typologies to build formidable defenses
-                against future threats before they emerge.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-emerald-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(5,150,105,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '1.2s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-emerald-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-emerald-400 text-center icon-bounce-on-hover">💡</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Explainable AI (XAI)
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Our AI doesn&apos;t just flag anomalies; it provides crystal-clear,
-                human-readable explanations, empowering analysts to make
-                faster, more informed decisions and generate fully compliant
-                reports.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-blue-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(37,99,235,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '1.4s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-blue-400 text-center icon-bounce-on-hover">🤝</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Privacy-Preserving Collaboration
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Pioneering a secure Distributed Ledger Technology (DLT) layer
-                for anonymized, immutable information sharing, fostering
-                collective intelligence across institutions without compromising
-                sensitive data.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-gray-800 p-10 rounded-3xl shadow-xl border border-pink-700 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up hover:shadow-[0_0_20px_4px_rgba(219,39,119,0.7)] transition-shadow duration-300"
-            style={{ '--animation-delay': '1.6s' } as React.CSSProperties}
-          >
-            <div className="absolute inset-0 bg-pink-900 opacity-0 group-hover:opacity-10 transition duration-300 group-hover-effect"></div>
-            <div className="relative z-10 inner-content">
-              <div className="text-7xl mb-6 text-pink-400 text-center icon-bounce-on-hover">🎮</div>
-              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">
-                Gamified Compliance
-              </h3>
-              <p className="text-gray-300 text-center leading-relaxed font-light">
-                Transforming tedious compliance into an intuitive and rewarding
-                experience through engaging interfaces, challenges, and
-                &apos;Anomaly Hunter&apos; gamification elements, attracting top analytical
-                talent.
-              </p>
-            </div>
-          </div>
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              onClick={() => setActiveCard(card)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 + index * 0.15 }}
+              className={`bg-gray-800 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer`}
+            >
+              <div className="text-7xl mb-6 text-center">{card.icon}</div>
+              <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">{card.title}</h3>
+              <p className="text-gray-300 text-center leading-relaxed font-light">{card.description1}</p>
+            </motion.div>
+          ))}
+        </div>
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-white">
+            Business Analytics Dashboard
+          </h3>
+          <video
+            src="/dash.mp4"
+            title="Business Analytics Dashboard"
+            className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl object-cover cursor-pointer"
+            muted
+            onMouseEnter={() => videoRef.current?.play()}
+            onMouseLeave={() => videoRef.current?.pause()}
+            ref={videoRef}
+            preload="metadata"
+            playsInline
+          />
         </div>
       </div>
-      <div className="mt-20 text-center">
-        <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-white">
-          Business Analytics Dashboard
-        </h3>
-        <img
-          src="/dash.jpg"
-          alt="Business Analytics Dashboard"
-          className="w-full max-w-3xl mx-auto rounded-2xl shadow-2xl object-cover"
-        />
-      </div>
+
+      {activeCard && (
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={() => setActiveCard(null)}
+        >
+          <div
+            className="bg-gray-900 p-10 rounded-3xl max-w-3xl w-full mx-6 relative border-l-4 border-cyan-500 text-left"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveCard(null)}
+              className="absolute top-4 right-5 text-white text-3xl hover:text-red-400 transition"
+            >
+              &times;
+            </button>
+            <div className="text-6xl mb-6">{activeCard.icon}</div>
+            <h3 className="text-4xl font-bold mb-6 text-white">{activeCard.title}</h3>
+            <p className="text-gray-300 text-lg leading-relaxed">{activeCard.description2}</p>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

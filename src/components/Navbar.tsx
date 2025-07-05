@@ -13,10 +13,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const closeMenu = () => setMobileMenuOpen(false)
+
   return (
     <header className="bg-gray-950/60 text-white shadow-xl sticky top-0 z-50 border-b border-gray-800 backdrop-blur-sm bg-opacity-80">
-      <nav className="container mx-auto px-6 py-5">
-        <div className="flex justify-between items-center w-full">  
+      <nav className="container mx-auto px-6 py-5 relative">
+        <div className="flex justify-between items-center w-full">
           <Link href="#" className="flex items-center space-x-3">
             <Image
               src="/logo.png"
@@ -63,17 +65,19 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-gray-900 border-t border-gray-800 shadow-inner mt-3 rounded-xl">
-            <ul className="flex flex-col items-center space-y-4 text-lg py-6">
-              <li><a href="#mission" className="hover:text-cyan-400">Our Mission</a></li>
-              <li><a href="#solution" className="hover:text-cyan-400">The Solution</a></li>
-              <li><a href="#differentiators" className="hover:text-cyan-400">Why Us</a></li>
-              <li><a href="#join-us" className="hover:text-cyan-400">Join Us</a></li>
-              <li><a href="#contact" className="hover:text-cyan-400">Contact</a></li>
-            </ul>
-          </div>
-        )}
+        <div
+          className={`lg:hidden absolute top-full left-0 w-full bg-gray-900 border-t border-gray-800 shadow-inner rounded-b-xl transition-all duration-300 overflow-hidden ${
+            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <ul className="flex flex-col items-center space-y-4 text-lg py-6 transition-opacity duration-300">
+            <li><a onClick={closeMenu} href="#mission" className="hover:text-cyan-400">Our Mission</a></li>
+            <li><a onClick={closeMenu} href="#solution" className="hover:text-cyan-400">The Solution</a></li>
+            <li><a onClick={closeMenu} href="#differentiators" className="hover:text-cyan-400">Why Us</a></li>
+            <li><a onClick={closeMenu} href="#join-us" className="hover:text-cyan-400">Join Us</a></li>
+            <li><a onClick={closeMenu} href="#contact" className="hover:text-cyan-400">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
   )

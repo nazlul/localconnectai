@@ -1,30 +1,41 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 bg-[#0d1f3d] text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 text-center relative"
+      className="py-24 px-6 bg-[#0d1f3d] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
       <div className="container mx-auto text-center">
-        <h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent animate-fade-in-scale-up"
-          style={{ '--animation-delay': '0.8s' } as React.CSSProperties}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
         >
           Let&apos;s Connect & Build
-        </h2>
-        <p
-          className="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-90 font-light animate-fade-in-scale-up"
-          style={{ '--animation-delay': '1.0s' } as React.CSSProperties}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+          className="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-90 font-light"
         >
           Whether you&apos;re a visionary ready to join our core team, a financial institution interested in a pilot program,
           or a strategic partner seeking to collaborate, we want to hear from you. Your expertise and passion can help shape the future of financial integrity.
-        </p>
+        </motion.p>
 
         <div className="flex flex-col md:flex-row justify-center items-stretch space-y-10 md:space-y-0 md:space-x-12">
-          <div
-            className="text-center bg-gray-800 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-hidden group animate-fade-in-scale-up"
-            style={{ '--animation-delay': '1.2s' } as React.CSSProperties}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            className="text-center bg-gray-800 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
@@ -67,11 +78,14 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div
-            className="text-center bg-gray-800 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-hidden group animate-fade-in-scale-up"
-            style={{ '--animation-delay': '1.4s' } as React.CSSProperties}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
+            className="text-center bg-gray-800 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-cyan-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
@@ -88,7 +102,7 @@ export default function Contact() {
                 <i className="fas fa-envelope mr-3" /> Email Us
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
