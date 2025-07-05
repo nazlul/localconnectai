@@ -6,7 +6,7 @@ import ChatBot from './ChatBot'
 export default function Hero() {
   return (
     <>      
-      <section className="relative bg-[#0d1f3d] text-[#F1F5F9] py-15 px-6 md:py-20 mb-4 md:mx-4 rounded-2xl">
+      <section className="relative bg-[#0d1f3d] text-[#F1F5F9] py-27 px-6 md:py-35 mb-4 md:mx-4 rounded-2xl">
         <div className="container mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 bg-gradient-to-r from-[#217EAA] to-[#6B46C1] text-transparent bg-clip-text drop-shadow-xl">
             Redefining Financial Integrity.
