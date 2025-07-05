@@ -22,7 +22,7 @@ export default function Hero() {
             Join the Mission
           </Link>
           <Link
-            href="#contact"
+            href="#about"
             className="bg-transparent border-2 border-[#2DD4BF] hover:bg-[#2DD4BF] text-white hover:text-gray-900 font-bold py-5 px-14 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-lg"
           >
             Learn More
