@@ -16,7 +16,7 @@ export default function Navbar() {
   const closeMenu = () => setMobileMenuOpen(false)
 
   return (
-    <header className="bg-gray-950/60 text-white shadow-xl sticky top-0 z-50 border-b border-gray-800 backdrop-blur-sm bg-opacity-80">
+    <header className="bg-gray-950/60 text-white shadow-xl sticky top-0 z[999] border-b border-gray-800 backdrop-blur-sm bg-opacity-80">
       <nav className="container mx-auto px-6 py-5 relative">
         <div className="flex justify-between items-center w-full">
           <Link href="#" className="flex items-center space-x-3">
@@ -66,7 +66,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`lg:hidden absolute top-full left-0 w-full bg-gray-900 border-t border-gray-800 shadow-inner rounded-b-xl transition-all duration-300 overflow-hidden ${
+          className={`lg:hidden absolute top-full left-0 w-full bg-gray-900 border-t border-gray-800 shadow-inner rounded-b-xl transition-all duration-300 overflow-x-hidden ${
             isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >

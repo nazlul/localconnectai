@@ -6,7 +6,7 @@ import ChatBot from './ChatBot'
 export default function Hero() {
   return (
     <>      
-      <section className="relative bg-[#0d1f3d] text-[#F1F5F9] py-15 px-6 md:py-20 overflow-hidden mb-4 md:mx-4 rounded-2xl overflow-x-hidden">
+      <section className="relative bg-[#0d1f3d] text-[#F1F5F9] py-15 px-6 md:py-20 mb-4 md:mx-4 rounded-2xl">
         <div className="container mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 bg-gradient-to-r from-[#217EAA] to-[#6B46C1] text-transparent bg-clip-text drop-shadow-xl">
             Redefining Financial Integrity.
@@ -36,7 +36,7 @@ export default function Hero() {
           href="https://wa.me/14155238886?text=join%20satisfied-inside"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-24 right-4 bg-[#25D366] hover:bg-[#1ebe57] rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg transition-all duration-300 overflow-hidden"
+          className="fixed bottom-24 right-4 bg-[#25D366] hover:bg-[#1ebe57] rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg transition-all duration-300 overflow-x-hidden"
           aria-label="Chat on WhatsApp"
         >
           <i className="fab fa-whatsapp text-white text-2xl sm:text-3xl"></i>

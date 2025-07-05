@@ -90,7 +90,7 @@ export default function Problem() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{ duration: 0.3, delay: 0.1 + index * 0.2 }}
-                className={`bg-gray-900 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-hidden group transition-shadow duration-300 cursor-pointer ${card.glow}`}
+                className={`bg-gray-900 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.glow}`}
                 style={{ [`--animation-delay`]: `${0.4 + index * 0.2}s` } as React.CSSProperties}
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />

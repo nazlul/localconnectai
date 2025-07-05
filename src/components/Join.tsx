@@ -93,7 +93,7 @@ export default function Join() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.2, delay: 0.1 }}
-              className={`bg-gray-800 text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up ${role.color} ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer`}
+              className={`bg-gray-800 text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up ${role.color} ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer`}
               style={{ '--animation-delay': `${1.2 + i * 0.2}s` } as React.CSSProperties}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
