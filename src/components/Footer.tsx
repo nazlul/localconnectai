@@ -55,7 +55,8 @@ export default function Footer() {
             <i className="fab fa-linkedin-in"></i>
           </a>
           <a 
-            href="#" 
+            href="https://www.t.me/LocalConnectAI_Official" 
+            target="_blank"
             rel="noopener noreferrer" 
             className="hover:text-cyan-400 transition"
             aria-label="Telegram">
