@@ -3,7 +3,14 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-20 px-6 text-center rounded-t-3xl shadow-inner border-t border-gray-800 relative">
-      <div className="container mx-auto flex flex-col items-center">
+      <div className="container mx-auto flex flex-col items-center mt-25">
+        <a
+          href="#"
+          className="absolute top-4 mt-14 left-1/2 text-2xl transform -translate-x-1/2 bg-cyan-400 hover:bg-cyan-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition"
+          aria-label="Back to top"
+        >
+          <i className="fa-solid fa-arrow-up"></i>
+        </a>
         <div className="flex items-center space-x-4 mb-6">
           <div className="h-13 w-auto flex items-center">
             <Image
@@ -53,15 +60,6 @@ export default function Footer() {
         <p className="text-sm sm:text-lg">
           &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
         </p>
-
-        <a
-          href="#"
-          className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-cyan-400 hover:bg-cyan-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition"
-          aria-label="Back to top"
-        >
-          <i className="fa-solid fa-arrow-up"></i>
-        </a>
-
       </div>
     </footer>
   )
