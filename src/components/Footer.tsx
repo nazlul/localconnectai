@@ -106,8 +106,7 @@ export default function Footer() {
         <p className="text-sm sm:text-lg">
         &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
       </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center space-x-4">
-        <div className="w-25 h-25 relative">
+        <div className="items-center justify-center w-200 h-60 -my-20 relative">
           <Image 
             src="/sars.png" 
             alt="SARS Logo" 
@@ -116,7 +115,6 @@ export default function Footer() {
             priority 
           />
         </div>
-      </div>
       </div>
     </footer>
   )
