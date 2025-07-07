@@ -2,11 +2,22 @@
 
 import Link from 'next/link'
 import ChatBot from './ChatBot'
+import Silk from './ui/Silk'
 
 export default function Hero() {
   return (
     <>      
-      <section className="relative bg-[#0d1f3d] text-[#F1F5F9] py-27 px-6 md:py-35 mb-4 md:mx-4 rounded-2xl">
+      <section className="relative min-h-screen text-[#F1F5F9] py-27 px-6 md:py-35 mb-4 rounded-2xl overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#0d1f3d"
+            noiseIntensity={1.2}
+            rotation={0.2}
+          />
+        </div>
+
         <div className="container mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 bg-gradient-to-r from-[#217EAA] to-[#6B46C1] text-transparent bg-clip-text drop-shadow-xl">
             Redefining Financial Integrity.
@@ -41,7 +52,6 @@ export default function Hero() {
         >
           <i className="fab fa-whatsapp text-white text-2xl sm:text-3xl"></i>
         </a> */}
-
       </section>
 
       <ChatBot />
