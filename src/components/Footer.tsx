@@ -75,6 +75,9 @@ export default function Footer() {
         <p className="text-sm sm:text-lg">
           &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
         </p>
+        <p className="text-xs sm:text-sm mt-2 text-gray-500">
+          Company Registration Number: 2025/533770/07
+        </p>
       </div>
     </footer>
   )
