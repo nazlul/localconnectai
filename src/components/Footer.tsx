@@ -17,7 +17,7 @@ export default function Footer() {
               src="/logo.png"
               alt="LocalConnect AI Logo"
               width={60}
-              height={80}
+              height={60}
               className="object-contain h-full w-auto"
             />
           </div>
