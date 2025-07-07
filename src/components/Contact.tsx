@@ -101,7 +101,18 @@ export default function Contact() {
               >
                 <i className="fas fa-envelope mr-3" /> Email Us
               </a>
+              <p className="text-xl text-gray-300 flex items-center justify-center mt-10">
+                  <i className="fab fa-whatsapp text-cyan-400 text-2xl mr-3" />
+                  <a
+                    href="https://wa.me/27641356433"
+                    target="_blank"
+                    className="hover:text-cyan-400 transition"
+                  >
+                    WhatsApp Us
+                  </a>
+                </p>
             </div>
+            
           </motion.div>
         </div>
       </div>
