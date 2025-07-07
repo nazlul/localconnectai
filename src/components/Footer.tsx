@@ -32,9 +32,24 @@ export default function Footer() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-base sm:text-xl mb-8">
-          <a href="#" className="hover:text-cyan-400 transition">Privacy Policy</a>
-          <a href="#" className="hover:text-cyan-400 transition">Terms of Service</a>
+          <a
+            href="/PP.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="/TOS.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition"
+          >
+            Terms of Service
+          </a>
         </div>
+
 
         <div className="flex justify-center gap-10 mb-8 text-2xl sm:text-3xl text-gray-400">
           <a 
