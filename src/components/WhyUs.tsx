@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Silk from './ui/Silk'
 
 type Feature = {
   icon: string
@@ -88,8 +89,17 @@ export default function WhyUs() {
   return (
     <section
       id="differentiators"
-      className="py-24 px-6 bg-[#0d1f3d] text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 relative"
+      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4"
     >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#0d1f3d"
+            noiseIntensity={1.2}
+            rotation={0.2}
+          />
+        </ div>
       <motion.div
         className="text-center mb-16"
         initial="hidden"
@@ -100,13 +110,13 @@ export default function WhyUs() {
           visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
         }}
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+        <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
           What Makes Us Untouchable
         </h2>
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

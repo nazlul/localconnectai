@@ -1,14 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Silk from './ui/Silk'
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 bg-[#0d1f3d] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
+      className="py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
-      <div className="container mx-auto text-center">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#0d1f3d"
+            noiseIntensity={1.2}
+            rotation={0.2}
+          />
+          </ div>
+      <div className="relative container mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

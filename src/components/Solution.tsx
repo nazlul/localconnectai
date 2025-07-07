@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import Silk from './ui/Silk'
 
 type Card = {
   icon: string
@@ -83,8 +84,17 @@ export default function Solution() {
   return (
     <section
       id="solution"
-      className="py-24 px-6 bg-[#162131] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 relative"
+      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4"
     >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#505050"
+            noiseIntensity={1.2}
+            rotation={3.2}
+          />
+          </ div>
       <div className="container mx-auto text-center relative z-10">
         <h2 className="text-5xl lg:text-6xl font-bold mb-20 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">
           Our Solution: Intelligent, Proactive, Connected AI
@@ -97,7 +107,7 @@ export default function Solution() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.1 }}
-              transition={{ duration: 0.3, delay: 0.1 + index * 0.15 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className={`bg-gray-800 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer`}
             >
               <div className="text-7xl mb-6 text-center">{card.icon}</div>

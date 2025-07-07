@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Silk from './ui/Silk'
 
 type ProblemCard = {
   icon: string
@@ -66,9 +67,18 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className="py-24 px-6 bg-[#0d1f3d] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4"
+      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4"
     >
-      <div className="container mx-auto">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#0d1f3d"
+            noiseIntensity={1.2}
+            rotation={0.2}
+          />
+          </ div>
+      <div className="container mx-auto relative">
         <h2
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 gradient-text bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text"
           style={{ '--animation-delay': '0.2s' } as React.CSSProperties}

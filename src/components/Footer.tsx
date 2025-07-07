@@ -104,11 +104,22 @@ export default function Footer() {
         </div>
 
         <p className="text-sm sm:text-lg">
-          &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
-        </p>
-        <p className="text-xs sm:text-sm mt-2 text-gray-500">
+        &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
+      </p>
+      <div className="flex flex-col sm:flex-row items-center justify-center space-x-4">
+        <div className="w-25 h-25 relative">
+          <Image 
+            src="/sars.png" 
+            alt="SARS Logo" 
+            fill 
+            style={{ objectFit: 'contain' }} 
+            priority 
+          />
+        </div>
+        <p className="text-xs sm:text-sm text-gray-500">
           Company Registration Number: 2025/533770/07
         </p>
+      </div>
       </div>
     </footer>
   )

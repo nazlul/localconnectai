@@ -1,14 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Silk from './ui/Silk'
 
 export default function Mission() {
   return (
     <section
       id="mission"
-      className="py-24 px-6 bg-[#162131] text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4"
+      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4"
     >
-      <div className="container mx-auto text-center">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#505050"
+            noiseIntensity={1.2}
+            rotation={3.2}
+          />
+          </ div>
+      <div className="relative container mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

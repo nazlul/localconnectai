@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Silk from './ui/Silk'
 
 type Role = {
   title: string
@@ -19,7 +20,7 @@ const roles: Role[] = [
     title: 'AML/Compliance Expert',
     icon: '⚖️',
     color: 'border-cyan-400',
-    bg: 'bg-cyan-950/30',
+    bg: 'bg-cyan-400/30',
     glow: 'hover:shadow-[0_0_25px_5px_rgba(34,211,238,0.4)]',
     description:
       'Deep FICA knowledge and a passion for ethical AI to uphold the highest legal and compliance standards.',
@@ -67,8 +68,17 @@ export default function Join() {
   return (
     <section
       id="join-us"
-      className="py-24 px-6 bg-[#162131] text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 text-center relative"
+      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <Silk
+            speed={5}
+            scale={1.5}
+            color="#505050"
+            noiseIntensity={1.2}
+            rotation={3.2}
+          />
+          </ div>
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-0" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-2000" />
@@ -93,7 +103,7 @@ export default function Join() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.2, delay: 0.1 }}
-              className={`bg-gray-800 text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up ${role.color} ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer`}
+              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up ${role.color} ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer`}
               style={{ '--animation-delay': `${1.2 + i * 0.2}s` } as React.CSSProperties}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
