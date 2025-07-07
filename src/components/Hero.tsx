@@ -17,8 +17,7 @@ export default function Hero() {
             rotation={0.2}
           />
         </div>
-
-        <div className="container mx-auto relative z-10 text-center">
+        <div className="container mx-auto relative z-10 text-center mt-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 bg-gradient-to-r from-[#217EAA] to-[#6B46C1] text-transparent bg-clip-text drop-shadow-xl">
             Redefining Financial Integrity.
             <br />

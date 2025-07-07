@@ -13,7 +13,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
         >
           Let&apos;s Connect & Build
@@ -22,7 +22,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 1.0 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           className="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-90 font-light"
         >
           Whether you&apos;re a visionary ready to join our core team, a financial institution interested in a pilot program,
@@ -34,7 +34,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.1 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
             className="text-center bg-gray-800 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
           >
             <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
