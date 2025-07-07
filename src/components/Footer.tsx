@@ -106,7 +106,7 @@ export default function Footer() {
         <p className="text-sm sm:text-lg">
         &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
       </p>
-        <div className="items-center justify-center w-200 h-60 -my-20 relative">
+        <div className="items-center justify-center w-250 h-80 -my-20 relative">
           <Image 
             src="/sars.png" 
             alt="SARS Logo" 
