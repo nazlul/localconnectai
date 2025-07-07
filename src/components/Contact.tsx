@@ -56,7 +56,7 @@ export default function Contact() {
                 <p className="text-xl text-gray-300 flex items-center justify-center">
                   <i className="fa-solid fa-phone-volume text-cyan-400 text-2xl mr-3" />
                   <a href="tel:+27641356433" className="hover:text-cyan-400 transition">
-                    064 135 6433
+                    +27 6413 56433
                   </a>
                 </p>
                 <p className="text-xl text-gray-300 flex items-center justify-center">
