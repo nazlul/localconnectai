@@ -65,7 +65,7 @@ export default function Footer() {
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-cyan-400 transition" 
-            aria-label="X">
+            aria-label="Facebook">
             <i className="fab fa-facebook"></i>
           </a>
           <a
@@ -92,6 +92,14 @@ export default function Footer() {
             className="hover:text-cyan-400 transition" 
             aria-label="Instagram">
             <i className="fab fa-instagram"></i>
+          </a>
+          <a 
+            href="https://www.youtube.com/@localconnectai/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-cyan-400 transition" 
+            aria-label="Youtube">
+            <i className="fab fa-youtube"></i>
           </a>
         </div>
 
