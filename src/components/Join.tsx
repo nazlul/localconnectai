@@ -107,15 +107,16 @@ export default function Join() {
         </div>
 
         <p className="text-xl md:text-2xl mb-12 opacity-90 font-light">
-          This is a rare equity opportunity to co-create a generational venture. Let’s build the AI guardrails for an entire continent.
+          This is a rare equity opportunity to co-create a generational venture. Let&apos;s build the AI guardrails for an entire continent.
         </p>
 
         <Link
           href="#contact"
-          className="text-gray-900 bg-[#2DD4BF] hover:bg-[#26bfb2] font-bold py-4 px-8 sm:py-6 sm:px-16 rounded-full text-xl sm:text-2xl transition duration-300 transform hover:scale-105 shadow-xl animate-glow-subtle"
+          className="gradient-hover rounded-full py-4 px-8 sm:py-6 sm:px-16 text-xl sm:text-2xl font-bold shadow-xl"
         >
-          Connect with Siyabonga
+          <span>Connect with Siyabonga</span>
         </Link>
+
       </div>
 
       {activeRole && (
