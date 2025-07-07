@@ -116,9 +116,6 @@ export default function Footer() {
             priority 
           />
         </div>
-        <p className="text-xs sm:text-sm text-gray-500">
-          Company Registration Number: 2025/533770/07
-        </p>
       </div>
       </div>
     </footer>

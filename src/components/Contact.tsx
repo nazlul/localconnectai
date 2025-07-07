@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
+      className="py-24 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
           <Silk
@@ -45,7 +45,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.2, delay: 0.2 }}
-            className="text-center bg-gray-800 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
+            className="text-center bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
           >
             <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
@@ -95,7 +95,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.2, delay: 0.1 }}
-            className="text-center bg-gray-800 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group"
+            className="text-center bg-gray-800/70 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group"
           >
             <div className="absolute inset-0 bg-cyan-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
             <div className="relative z-10">

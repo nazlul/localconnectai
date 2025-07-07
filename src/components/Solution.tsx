@@ -84,13 +84,13 @@ export default function Solution() {
   return (
     <section
       id="solution"
-      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4"
+      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 overflow-hidden"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
           <Silk
             speed={5}
             scale={1.5}
-            color="#505050"
+            color="#0d1f3d"
             noiseIntensity={1.2}
             rotation={3.2}
           />
@@ -108,7 +108,7 @@ export default function Solution() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className={`bg-gray-800 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer`}
+              className={`bg-gray-800/70 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer`}
             >
               <div className="text-7xl mb-6 text-center">{card.icon}</div>
               <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">{card.title}</h3>

@@ -89,7 +89,7 @@ export default function WhyUs() {
   return (
     <section
       id="differentiators"
-      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4"
+      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
           <Silk
@@ -126,7 +126,7 @@ export default function WhyUs() {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300"
+            className="bg-gray-900/70 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300"
             onClick={() => setActiveFeature(feature)}
           >
             <div className="flex items-start space-x-4">

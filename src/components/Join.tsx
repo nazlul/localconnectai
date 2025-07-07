@@ -68,13 +68,13 @@ export default function Join() {
   return (
     <section
       id="join-us"
-      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 text-center"
+      className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
           <Silk
             speed={5}
             scale={1.5}
-            color="#505050"
+            color="#0d1f3d"
             noiseIntensity={1.2}
             rotation={3.2}
           />
