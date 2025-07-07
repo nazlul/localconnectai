@@ -60,6 +60,14 @@ export default function Footer() {
             aria-label="X">
             <i className="fab fa-x-twitter"></i>
           </a>
+          <a 
+            href="https://www.facebook.com/profile.php?id=100083309412412" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition" 
+            aria-label="X">
+            <i className="fab fa-facebook"></i>
+          </a>
           <a
             href="https://www.linkedin.com/company/localconnect-ai/"
             target="_blank"
