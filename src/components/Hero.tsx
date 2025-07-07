@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <a
+        {/* <a
           href="https://wa.me/14155238886?text=join%20satisfied-inside"
           target="_blank"
           rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Hero() {
           aria-label="Chat on WhatsApp"
         >
           <i className="fab fa-whatsapp text-white text-2xl sm:text-3xl"></i>
-        </a>
+        </a> */}
 
       </section>
 
