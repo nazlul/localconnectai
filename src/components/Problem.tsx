@@ -152,7 +152,7 @@ export default function Problem() {
                 className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.shadow}`}
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
-                <div className="relative z-10">
+                <div className="relative z-10 h-[320px] flex flex-col justify-center">
                   <div className="text-6xl sm:text-7xl mb-6 text-center">{card.icon}</div>
                   <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-50 text-center">{card.title}</h3>
                   <p className="text-gray-300 text-center leading-relaxed font-light text-base sm:text-lg">{card.description1}</p>
