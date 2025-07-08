@@ -1,4 +1,16 @@
+'use client'
+
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faFacebook,
+  faXTwitter,
+  faLinkedinIn,
+  faTelegramPlane,
+  faInstagram,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 export default function Footer() {
   return (
@@ -9,8 +21,9 @@ export default function Footer() {
           className="absolute top-4 mt-14 left-1/2 text-2xl transform -translate-x-1/2 bg-cyan-400 hover:bg-cyan-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition"
           aria-label="Back to top"
         >
-          <i className="fa-solid fa-arrow-up"></i>
+          <FontAwesomeIcon icon={faArrowUp} />
         </a>
+
         <div className="flex items-center space-x-4 mb-6">
           <div className="h-13 w-auto flex items-center">
             <Image
@@ -50,23 +63,24 @@ export default function Footer() {
           </a>
         </div>
 
-
         <div className="flex justify-center gap-10 mb-8 text-2xl sm:text-3xl text-gray-400">
-          <a 
-            href="https://x.com/LocalConnectAi" 
-            target="_blank" 
+          <a
+            href="https://x.com/LocalConnectAi"
+            target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition" 
-            aria-label="X">
-            <i className="fab fa-x-twitter"></i>
+            className="hover:text-cyan-400 transition"
+            aria-label="X"
+          >
+            <FontAwesomeIcon icon={faXTwitter} />
           </a>
-          <a 
-            href="https://www.facebook.com/profile.php?id=100083309412412" 
-            target="_blank" 
+          <a
+            href="https://www.facebook.com/profile.php?id=100083309412412"
+            target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition" 
-            aria-label="Facebook">
-            <i className="fab fa-facebook"></i>
+            className="hover:text-cyan-400 transition"
+            aria-label="Facebook"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a
             href="https://www.linkedin.com/company/localconnect-ai/"
@@ -75,44 +89,48 @@ export default function Footer() {
             className="hover:text-cyan-400 transition"
             aria-label="LinkedIn"
           >
-            <i className="fab fa-linkedin-in"></i>
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
-          <a 
-            href="https://www.t.me/LocalConnectAI_Official" 
+          <a
+            href="https://www.t.me/LocalConnectAI_Official"
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             className="hover:text-cyan-400 transition"
-            aria-label="Telegram">
-            <i className="fab fa-telegram-plane"></i>
+            aria-label="Telegram"
+          >
+            <FontAwesomeIcon icon={faTelegramPlane} />
           </a>
-          <a 
-            href="https://www.instagram.com/localconnect_ai/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-cyan-400 transition" 
-            aria-label="Instagram">
-            <i className="fab fa-instagram"></i>
+          <a
+            href="https://www.instagram.com/localconnect_ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition"
+            aria-label="Instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a 
-            href="https://www.youtube.com/@localconnectai/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-cyan-400 transition" 
-            aria-label="Youtube">
-            <i className="fab fa-youtube"></i>
+          <a
+            href="https://www.youtube.com/@localconnectai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition"
+            aria-label="Youtube"
+          >
+            <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
 
         <p className="text-sm sm:text-lg">
-        &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
-      </p>
+          &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
+        </p>
+
         <div className="items-center justify-center w-250 h-80 -my-20 relative">
-          <Image 
-            src="/sars.png" 
-            alt="SARS Logo" 
-            fill 
-            style={{ objectFit: 'contain' }} 
-            priority 
+          <Image
+            src="/sars.png"
+            alt="SARS Logo"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
           />
         </div>
       </div>
