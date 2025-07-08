@@ -75,11 +75,10 @@ html, body {
 }
 
 .animate-fade-slide-up {
-  animation-name: fade-slide-up;
-  animation-fill-mode: forwards;
-  animation-duration: 0.35s;
-  animation-timing-function: ease-out;
+  animation: fade-slide-up 0.5s ease forwards;
+  will-change: transform, opacity;
 }
+
 
 .delay-150 {
   animation-delay: 0.15s;
