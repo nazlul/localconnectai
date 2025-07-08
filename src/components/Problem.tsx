@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Silk from './ui/Silk'
+import dynamic from 'next/dynamic'
+
+const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 type ProblemCard = {
   icon: string

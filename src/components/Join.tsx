@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Silk from './ui/Silk'
+import dynamic from 'next/dynamic'
+
+const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 type Role = {
   title: string
