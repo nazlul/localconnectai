@@ -120,7 +120,7 @@ export default function WhyUs() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.1 }}
       >
         {features.map((feature, index) => (
           <motion.div
