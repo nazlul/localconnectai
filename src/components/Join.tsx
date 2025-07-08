@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 
-
 type Role = {
   title: string
   icon: string
@@ -19,8 +18,8 @@ const roles: Role[] = [
     title: 'AML/Compliance Expert',
     icon: '⚖️',
     color: 'border-cyan-400',
-    bg: 'bg-cyan-400/30',
-    glow: 'hover:shadow-[0_0_25px_5px_rgba(34,211,238,0.4)]',
+    bg: 'bg-cyan-400/20',
+    glow: '',
     description:
       'Deep FICA knowledge and a passion for ethical AI to uphold the highest legal and compliance standards.',
     detail:
@@ -30,8 +29,8 @@ const roles: Role[] = [
     title: 'Data Engineer/Architect',
     icon: '💾',
     color: 'border-teal-400',
-    bg: 'bg-teal-950/30',
-    glow: 'hover:shadow-[0_0_25px_5px_rgba(45,212,191,0.4)]',
+    bg: 'bg-teal-950/20',
+    glow: '',
     description:
       'A master of scalable pipelines and real-time distributed systems to handle massive financial data.',
     detail:
@@ -41,8 +40,8 @@ const roles: Role[] = [
     title: 'AI/ML Virtuoso',
     icon: '🧠',
     color: 'border-purple-400',
-    bg: 'bg-purple-950/30',
-    glow: 'hover:shadow-[0_0_25px_5px_rgba(192,132,252,0.4)]',
+    bg: 'bg-purple-950/20',
+    glow: '',
     description:
       'Expert in GNNs, XAI, and Generative AI to build models that not only predict but explain and adapt.',
     detail:
@@ -52,8 +51,8 @@ const roles: Role[] = [
     title: 'Growth/Impact Evangelist',
     icon: '📈',
     color: 'border-pink-400',
-    bg: 'bg-pink-950/30',
-    glow: 'hover:shadow-[0_0_25px_5px_rgba(244,114,182,0.4)]',
+    bg: 'bg-pink-950/20',
+    glow: '',
     description:
       'A visionary communicator to lead partnerships, adoption, and maximize impact across the continent.',
     detail:
@@ -63,7 +62,7 @@ const roles: Role[] = [
 
 export default function Join() {
   const [activeRole, setActiveRole] = useState<Role | null>(null)
-  const ref = useRef(null)
+  const ref = useRef<HTMLElement>(null)
   const [showAnim, setShowAnim] = useState(false)
 
   useEffect(() => {
@@ -82,32 +81,28 @@ export default function Join() {
       className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
       <video
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        />
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-0" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-2000" />
-      </div>
-
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 will-change-transform"
+        src="/bg-3.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      />
       <div className="relative z-10">
         <h2
-          className={`text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text ${
-            showAnim ? 'animate-fade-in-up' : 'opacity-0'
+          className={`text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text transition-opacity duration-700 ease-out ${
+            showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           Dare to Build a Legacy? Join the Revolution.
         </h2>
 
         <p
-          className={`text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light ${
-            showAnim ? 'animate-fade-in-up delay-150' : 'opacity-0'
+          className={`text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light transition-opacity duration-700 ease-out ${
+            showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
+          style={{ transitionDelay: '150ms' }}
         >
           LocalConnect AI isn&apos;t just a company — it&apos;s a mission to secure South Africa&apos;s financial future. We&apos;re building a founding team ready to lead a global transformation.
         </p>
@@ -117,12 +112,12 @@ export default function Join() {
             <div
               key={i}
               onClick={() => setActiveRole(role)}
-              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern ${
+              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border cursor-pointer border-opacity-60 bg-opacity-20 transform transition-transform duration-300 hover:scale-105 ${
                 role.color
-              } ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer ${
-                showAnim ? 'animate-fade-in-up' : 'opacity-0'
+              } ${role.bg} ${
+                showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ animationDelay: `${0.2 * i}s` } as React.CSSProperties}
+              style={{ transitionDelay: `${200 * i}ms` }}
             >
               <div className="text-6xl mb-6 text-center">{role.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
@@ -137,9 +132,9 @@ export default function Join() {
 
         <Link
           href="#contact"
-          className="gradient-hover rounded-full py-4 px-8 sm:py-6 sm:px-16 text-xl sm:text-2xl font-bold shadow-xl"
+          className="gradient-hover rounded-full py-4 px-8 sm:py-6 sm:px-16 text-xl sm:text-2xl font-bold shadow-xl inline-block"
         >
-          <span>Connect with Siyabonga</span>
+          Connect with Siyabonga
         </Link>
       </div>
 
