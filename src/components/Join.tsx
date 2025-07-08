@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
@@ -66,55 +65,65 @@ const roles: Role[] = [
 
 export default function Join() {
   const [activeRole, setActiveRole] = useState<Role | null>(null)
+  const ref = useRef(null)
+  const [showAnim, setShowAnim] = useState(false)
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setShowAnim(true),
+      { threshold: 0.2 }
+    )
+    if (ref.current) obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [])
 
   return (
     <section
       id="join-us"
+      ref={ref}
       className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
-          <Silk
-            speed={5}
-            scale={1.5}
-            color="#0d1f3d"
-            noiseIntensity={1.2}
-            rotation={3.2}
-          />
-          </ div>
+        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={3.2} />
+      </div>
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-0" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-2000" />
       </div>
 
       <div className="relative z-10">
-        <h2 className="text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">
+        <h2
+          className={`text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text ${
+            showAnim ? 'animate-fade-in-up' : 'opacity-0'
+          }`}
+        >
           Dare to Build a Legacy? Join the Revolution.
         </h2>
 
-        <p className="text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light">
-          LocalConnect AI isn&apos;t just a company — it&apos;s a mission to secure South Africa&apos;s financial future. We&apos;re building a founding
-          team ready to lead a global transformation.
+        <p
+          className={`text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light ${
+            showAnim ? 'animate-fade-in-up delay-150' : 'opacity-0'
+          }`}
+        >
+          LocalConnect AI isn&apos;t just a company — it&apos;s a mission to secure South Africa&apos;s financial future. We&apos;re building a founding team ready to lead a global transformation.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 mb-16">
           {roles.map((role, i) => (
-            <motion.div
+            <div
               key={i}
               onClick={() => setActiveRole(role)}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.1 }}
-              transition={{ duration: 0.2, delay: 0.1 }}
-              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern animate-fade-in-scale-up ${role.color} ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer`}
-              style={{ '--animation-delay': `${1.2 + i * 0.2}s` } as React.CSSProperties}
+              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border hover:scale-105 relative overflow-x-hidden group card-3d-tilt grid-pattern ${
+                role.color
+              } ${role.bg} ${role.glow} bg-opacity-10 transform transition-all duration-300 cursor-pointer ${
+                showAnim ? 'animate-fade-in-up' : 'opacity-0'
+              }`}
+              style={{ animationDelay: `${0.2 * i}s` } as React.CSSProperties}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
-              <div className="relative z-10">
-                <div className="text-6xl mb-6 text-center">{role.icon}</div>
-                <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
-                <p className="text-gray-300 leading-relaxed font-light">{role.description}</p>
-              </div>
-            </motion.div>
+              <div className="text-6xl mb-6 text-center">{role.icon}</div>
+              <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
+              <p className="text-gray-300 leading-relaxed font-light">{role.description}</p>
+            </div>
           ))}
         </div>
 
@@ -128,7 +137,6 @@ export default function Join() {
         >
           <span>Connect with Siyabonga</span>
         </Link>
-
       </div>
 
       {activeRole && (

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
 const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
@@ -71,20 +70,6 @@ const features: Feature[] = [
   }
 ]
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 }
-}
-
 export default function WhyUs() {
   const [activeFeature, setActiveFeature] = useState<Feature | null>(null)
 
@@ -94,59 +79,37 @@ export default function WhyUs() {
       className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
-          <Silk
-            speed={5}
-            scale={1.5}
-            color="#0d1f3d"
-            noiseIntensity={1.2}
-            rotation={0.2}
-          />
-        </ div>
-      <motion.div
-        className="text-center mb-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.1 }}
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
-        }}
+        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={0.2} />
+      </div>
+      <div
+        className="text-center mb-16 animate-fade-slide-up"
+        style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
       >
         <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
           What Makes Us Untouchable
         </h2>
-      </motion.div>
-
-      <motion.div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.1 }}
-      >
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            variants={itemVariants}
-            className="bg-gray-900/70 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300"
-            onClick={() => setActiveFeature(feature)}
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative">
+        {features.map((f, i) => (
+          <div
+            key={i}
+            onClick={() => setActiveFeature(f)}
+            className="bg-gray-900/70 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300 animate-fade-slide-up"
+            style={{ animationDelay: `${0.2 + i * 0.15}s`, animationFillMode: 'both' } as React.CSSProperties}
           >
             <div className="flex items-start space-x-4">
-              <div className={`text-4xl ${feature.color}`}>{feature.icon}</div>
+              <div className={`text-4xl ${f.color}`}>{f.icon}</div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-base font-light leading-relaxed">
-                  {feature.description1}
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-2">{f.title}</h3>
+                <p className="text-gray-300 text-base font-light leading-relaxed">{f.description1}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-
+      </div>
       {activeFeature && (
         <div
-          className="fixed inset-0 bg-black/30 bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
           onClick={() => setActiveFeature(null)}
         >
           <div

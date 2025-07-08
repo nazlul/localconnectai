@@ -40,82 +40,35 @@ export default function Footer() {
         </div>
 
         <p className="mb-8 text-base sm:text-xl font-light max-w-4xl mx-auto">
-          Dedicated to building a future of unwavering financial integrity in South Africa through relentless AI
-          innovation, secure methodologies, and a commitment to societal impact.
+          Dedicated to building a future of unwavering financial integrity in South Africa through relentless AI innovation, secure methodologies, and a commitment to societal impact.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-base sm:text-xl mb-8">
-          <a
-            href="/PP.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
+          <a href="/PP.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             Privacy Policy
           </a>
-          <a
-            href="/TOS.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
+          <a href="/TOS.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             Terms of Service
           </a>
         </div>
 
         <div className="flex justify-center gap-10 mb-8 text-2xl sm:text-3xl text-gray-400">
-          <a
-            href="https://x.com/LocalConnectAi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="X"
-          >
+          <a href="https://x.com/LocalConnectAi" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="X">
             <FontAwesomeIcon icon={faXTwitter} />
           </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100083309412412"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="Facebook"
-          >
+          <a href="https://www.facebook.com/profile.php?id=100083309412412" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Facebook">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a
-            href="https://www.linkedin.com/company/localconnect-ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="LinkedIn"
-          >
+          <a href="https://www.linkedin.com/company/localconnect-ai/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="LinkedIn">
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
-          <a
-            href="https://www.t.me/LocalConnectAI_Official"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="Telegram"
-          >
+          <a href="https://www.t.me/LocalConnectAI_Official" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Telegram">
             <FontAwesomeIcon icon={faTelegramPlane} />
           </a>
-          <a
-            href="https://www.instagram.com/localconnect_ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/localconnect_ai/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Instagram">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a
-            href="https://www.youtube.com/@localconnectai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-            aria-label="Youtube"
-          >
+          <a href="https://www.youtube.com/@localconnectai/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Youtube">
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
@@ -124,14 +77,8 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
         </p>
 
-        <div className="items-center justify-center w-250 h-80 -my-20 relative">
-          <Image
-            src="/sars.png"
-            alt="SARS Logo"
-            fill
-            style={{ objectFit: 'contain' }}
-            priority
-          />
+        <div className="relative w-[300px] h-[100px]">
+          <Image src="/sars.png" alt="SARS Logo" fill style={{ objectFit: 'contain' }} priority />
         </div>
       </div>
     </footer>

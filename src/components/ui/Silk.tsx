@@ -1,6 +1,5 @@
 'use client'
 
-/* eslint-disable react/no-unknown-property */
 import React, { forwardRef, useMemo, useRef, useLayoutEffect } from "react";
 import { Canvas, useFrame, useThree, RootState } from "@react-three/fiber";
 import { Color, Mesh, ShaderMaterial } from "three";
@@ -98,16 +97,14 @@ const SilkPlane = forwardRef<Mesh, SilkPlaneProps>(function SilkPlane(
   const { viewport } = useThree();
 
   useLayoutEffect(() => {
-    const mesh = ref as React.MutableRefObject<Mesh | null>;
-    if (mesh.current) {
-      mesh.current.scale.set(viewport.width, viewport.height, 1);
+    if (ref && "current" in ref && ref.current) {
+      ref.current.scale.set(viewport.width, viewport.height, 1);
     }
   }, [ref, viewport]);
 
   useFrame((_state: RootState, delta: number) => {
-    const mesh = ref as React.MutableRefObject<Mesh | null>;
-    if (mesh.current) {
-      const material = mesh.current.material as ShaderMaterial & {
+    if (ref && "current" in ref && ref.current) {
+      const material = ref.current.material as ShaderMaterial & {
         uniforms: SilkUniforms;
       };
       material.uniforms.uTime.value += 0.1 * delta;
@@ -138,7 +135,7 @@ export interface SilkProps {
 const Silk: React.FC<SilkProps> = ({
   speed = 3,
   scale = 1,
-  color = "#0d1f3d",    
+  color = "#0d1f3d",
   noiseIntensity = 0.5,
   rotation = 0,
 }) => {
@@ -157,9 +154,15 @@ const Silk: React.FC<SilkProps> = ({
   );
 
   return (
-    <Canvas dpr={[1, 2]} frameloop="always" style={{ width: '100%', height: '100%' }}>
-      <SilkPlane ref={meshRef} uniforms={uniforms} />
-    </Canvas>
+    <div style={{ width: "100%", height: "100%", pointerEvents: "none", position: "absolute", inset: 0 }}>
+      <Canvas
+        dpr={[1, 2]}
+        frameloop="always" 
+        style={{ width: "100%", height: "100%" }}
+      >
+        <SilkPlane ref={meshRef} uniforms={uniforms} />
+      </Canvas>
+    </div>
   );
 };
 

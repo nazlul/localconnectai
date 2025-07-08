@@ -62,3 +62,25 @@ html, body {
   position: relative;
   z-index: 10;
 }
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation-name: fade-slide-up;
+  animation-fill-mode: forwards;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-out;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}

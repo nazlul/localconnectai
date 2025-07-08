@@ -1,70 +1,128 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import React from 'react'
 
 const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
-type ProblemCard = {
+type Card = {
   icon: string
   title: string
-  short: string
-  long: string
+  description1: string
+  description2: string
   color: string
-  glow: string
+  ring: string
+  shadow: string
 }
 
-const cards: ProblemCard[] = [
+const cards: Card[] = [
   {
-    icon: '💸',
-    title: 'Billions Lost Annually',
-    short:
-      'Financial crime, fraud, and illicit flows continue to drain the economy, impacting businesses and citizens alike, hindering national growth and development.',
-    long:
-      'Global financial crime results in annual losses exceeding trillions, impacting both public and private sectors. Businesses face growing costs for compliance and recovery, while citizens suffer economic and social consequences. These losses are further compounded by underreporting and inefficient systems struggling to keep up with emerging fraud techniques.',
-    color: 'border-red-700',
-    glow: 'hover:shadow-[0_0_20px_4px_rgba(220,38,38,0.7)]'
+    icon: '🧠',
+    title: 'Predictive Anomaly Detection',
+    description1: 'Our AI learns complex patterns to detect suspicious activities with high accuracy.',
+    description2:
+      'Using deep learning, our AI continuously adapts to evolving criminal behavior by analyzing transaction metadata, velocity patterns, and behavioral biometrics. This system reduces false positives while catching nuanced fraud attempts previously missed by rule-based systems. Institutions benefit from higher detection rates and improved compliance workflows.',
+    color: 'border-cyan-500',
+    ring: 'hover:ring-cyan-400',
+    shadow: 'hover:shadow-cyan-500/40',
   },
   {
-    icon: '⚠️',
-    title: 'FATF Greylisting Burden',
-    short:
-      "South Africa's greylisting pressures financial institutions to urgently enhance their AML/CTF capabilities, demanding robust and sophisticated solutions.",
-    long:
-      'Being greylisted by the Financial Action Task Force brings reputational risks, increased scrutiny, and global financial constraints. South African banks and institutions now face elevated compliance demands, slowing international transactions and increasing operating overheads until advanced monitoring and intelligence frameworks are adopted.',
-    color: 'border-yellow-700',
-    glow: 'hover:shadow-[0_0_20px_4px_rgba(202,138,4,0.7)]'
+    icon: '🕸️',
+    title: 'Network Intelligence (GNNs)',
+    description1: 'Uncover hidden criminal structures by analyzing complex networks.',
+    description2:
+      'Graph Neural Networks model transactional ecosystems as interconnected graphs, revealing links between shell accounts, mules, and laundering rings. Our engine visualizes these connections with risk weights and propagates intelligence across nodes, identifying fraud rings before they act. This capability is essential in targeting coordinated, large-scale financial crime.',
+    color: 'border-teal-500',
+    ring: 'hover:ring-teal-400',
+    shadow: 'hover:shadow-teal-500/40',
   },
   {
-    icon: '👻',
-    title: 'Evolving Criminal Sophistication',
-    short:
-      'Criminal networks adapt faster than traditional rule-based systems, leading to persistent missed threats and the rapid emergence of new, complex typologies.',
-    long:
-      'Cybercriminals now leverage AI, blockchain, and cross-border laundering to evade detection. Traditional defenses are reactive and slow, relying on outdated typologies. Without proactive AI-driven systems, institutions remain vulnerable to highly adaptive fraud rings, insider threats, and money-laundering networks that continuously change patterns.',
-    color: 'border-purple-700',
-    glow: 'hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.7)]'
-  }
+    icon: '🔮',
+    title: 'Proactive Threat Simulation',
+    description1: 'Simulate evolving fraud and laundering techniques before they hit.',
+    description2:
+      'Generative AI models create synthetic threats based on emerging typologies, simulating next-gen attack vectors including AI-assisted laundering and cross-chain obfuscation. This proactive defense framework trains your team and systems against unseen threats, giving your institution a strategic head start against sophisticated adversaries.',
+    color: 'border-purple-500',
+    ring: 'hover:ring-purple-400',
+    shadow: 'hover:shadow-purple-500/40',
+  },
+  {
+    icon: '💡',
+    title: 'Explainable AI (XAI)',
+    description1: 'Get clear, human-readable explanations for every flagged anomaly.',
+    description2:
+      'Our XAI modules convert raw model predictions into readable justifications using natural language, graphs, and scoring metrics. Analysts can instantly understand “why” an alert was raised—ensuring trust, speed, and full auditability in high-stakes environments like KYC, AML, and regulatory reporting.',
+    color: 'border-emerald-500',
+    ring: 'hover:ring-emerald-400',
+    shadow: 'hover:shadow-emerald-500/40',
+  },
+  {
+    icon: '🤝',
+    title: 'Privacy-Preserving Collaboration',
+    description1: 'Enable secure collaboration without exposing private data.',
+    description2:
+      'Our blockchain-backed zero-knowledge layer enables multiple institutions to share signals, flags, and behavior patterns anonymously and immutably. Threats that cross borders or entities can now be tackled collectively, with no risk of data leaks or privacy violations.',
+    color: 'border-blue-500',
+    ring: 'hover:ring-blue-400',
+    shadow: 'hover:shadow-blue-500/40',
+  },
+  {
+    icon: '🎮',
+    title: 'Gamified Compliance',
+    description1: 'Make compliance intuitive, rewarding, and engaging.',
+    description2:
+      'Our platform introduces gamification into analyst workflows through point-based systems, progress bars, live leaderboards, and achievement badges. Designed to reduce fatigue and enhance performance, it transforms compliance from a checkbox task into an engaging and motivating challenge.',
+    color: 'border-pink-500',
+    ring: 'hover:ring-pink-400',
+    shadow: 'hover:shadow-pink-500/40',
+  },
 ]
 
-const variants = {
-  left: {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 }
-  },
-  middle: {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 }
-  },
-  right: {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 }
-  }
+function FadeSlideUp({
+  children,
+  className = '',
+  threshold = 0.1,
+  delay = 0,
+}: {
+  children: React.ReactNode
+  className?: string
+  threshold?: number
+  delay?: number
+}) {
+  const ref = React.useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = React.useState(false)
+
+  React.useEffect(() => {
+    if (!ref.current) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold }
+    )
+    observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return (
+    <div
+      ref={ref}
+      className={`${className} ${
+        visible ? 'animate-fade-slide-up' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ animationDelay: `${delay}s`, animationFillMode: 'both' }}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default function Problem() {
-  const [activeCard, setActiveCard] = useState<ProblemCard | null>(null)
+  const [activeCard, setActiveCard] = useState<Card | null>(null)
 
   return (
     <section
@@ -72,50 +130,32 @@ export default function Problem() {
       className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl overflow-hidden shadow-2xl my-4 md:mx-4"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
-          <Silk
-            speed={5}
-            scale={1.5}
-            color="#0d1f3d"
-            noiseIntensity={1.2}
-            rotation={0.2}
-          />
-          </ div>
+        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={0.2} />
+      </div>
       <div className="container mx-auto relative">
-        <h2
+        <FadeSlideUp
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 gradient-text bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text"
-          style={{ '--animation-delay': '0.2s' } as React.CSSProperties}
+          delay={0.2}
         >
           The Problem: Traditional Defenses Are Falling
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
-          {cards.map((card, index) => {
-            let variantName: 'left' | 'middle' | 'right' = 'middle'
-            if (index === 0) variantName = 'left'
-            else if (index === 2) variantName = 'right'
+        </FadeSlideUp>
 
-            return (
-              <motion.div
-                key={index}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-10">
+          {cards.map((card, i) => (
+            <FadeSlideUp key={i} delay={0.4 + i * 0.2}>
+              <div
                 onClick={() => setActiveCard(card)}
-                variants={variants[variantName]}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.1 }}
-                transition={{ duration: 0.3, delay: 0.1 + index * 0.2 }}
-                className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.glow}`}
-                style={{ [`--animation-delay`]: `${0.4 + index * 0.2}s` } as React.CSSProperties}
+                className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.shadow}`}
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
                 <div className="relative z-10">
                   <div className="text-6xl sm:text-7xl mb-6 text-center">{card.icon}</div>
                   <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-50 text-center">{card.title}</h3>
-                  <p className="text-gray-300 text-center leading-relaxed font-light text-base sm:text-lg">
-                    {card.short}
-                  </p>
+                  <p className="text-gray-300 text-center leading-relaxed font-light text-base sm:text-lg">{card.description1}</p>
                 </div>
-              </motion.div>
-            )
-          })}
+              </div>
+            </FadeSlideUp>
+          ))}
         </div>
       </div>
 
@@ -136,7 +176,7 @@ export default function Problem() {
             </button>
             <div className="text-6xl mb-6">{activeCard.icon}</div>
             <h3 className="text-4xl font-bold mb-6 text-white">{activeCard.title}</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{activeCard.long}</p>
+            <p className="text-gray-300 text-lg leading-relaxed">{activeCard.description2}</p>
           </div>
         </div>
       )}

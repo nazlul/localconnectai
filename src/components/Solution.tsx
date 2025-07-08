@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
 const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
@@ -89,33 +88,27 @@ export default function Solution() {
       className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 overflow-hidden"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
-          <Silk
-            speed={5}
-            scale={1.5}
-            color="#0d1f3d"
-            noiseIntensity={1.2}
-            rotation={3.2}
-          />
-          </ div>
+        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={3.2} />
+      </div>
       <div className="container mx-auto text-center relative z-10">
-        <h2 className="text-5xl lg:text-6xl font-bold mb-20 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">
+        <h2
+          className="text-5xl lg:text-6xl font-bold mb-20 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text animate-fade-slide-up"
+          style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
+        >
           Our Solution: Intelligent, Proactive, Connected AI
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
+          {cards.map((card, i) => (
+            <div
+              key={i}
               onClick={() => setActiveCard(card)}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.1 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className={`bg-gray-800/70 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer`}
+              className={`bg-gray-800/70 p-10 rounded-3xl border-2 ${card.color} ${card.ring} ${card.shadow} transition-all duration-300 shadow-xl hover:shadow-2xl hover:ring-1 cursor-pointer animate-fade-slide-up`}
+              style={{ animationDelay: `${0.2 + i * 0.15}s`, animationFillMode: 'both' } as React.CSSProperties}
             >
               <div className="text-7xl mb-6 text-center">{card.icon}</div>
               <h3 className="text-3xl font-semibold mb-4 text-gray-50 text-center">{card.title}</h3>
               <p className="text-gray-300 text-center leading-relaxed font-light">{card.description1}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className="mt-20 text-center">
