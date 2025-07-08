@@ -16,13 +16,18 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-20 px-6 text-center rounded-t-3xl shadow-inner border-t border-gray-800 relative">
       <div className="container mx-auto flex flex-col items-center mt-25">
-        <a
-          href="#"
-          className="absolute top-4 mt-14 left-1/2 text-2xl transform -translate-x-1/2 bg-cyan-400 hover:bg-cyan-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition"
-          aria-label="Back to top"
-        >
+      <a
+        href="#"
+        className="absolute top-4 mt-14 left-1/2 transform -translate-x-1/2 flex flex-col items-center group"
+        aria-label="Back to top"
+      >
+        <div className="bg-cyan-400 group-hover:bg-cyan-600 text-[#000e4c] w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition text-2xl">
           <FontAwesomeIcon icon={faArrowUp} />
-        </a>
+        </div>
+        <div className="mt-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-[#000e4c] px-4 py-1 rounded-full text-sm font-medium shadow transition">
+          Back to Top
+        </div>
+      </a>
 
         <div className="flex items-center space-x-4 mb-6">
           <div className="h-13 w-auto flex items-center">
