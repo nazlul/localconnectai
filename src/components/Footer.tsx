@@ -82,8 +82,10 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} LocalConnect AI. All rights reserved. Built with passion in South Africa.
         </p>
 
-        <div className="relative w-[300px] h-[100px]">
-          <Image src="/sars.png" alt="SARS Logo" fill style={{ objectFit: 'contain' }} priority />
+        <div className="flex justify-center items-center w-full mt-6">
+          <div className="relative w-[300px] h-[100px]">
+            <Image src="/sars.png" alt="SARS Logo" fill style={{ objectFit: 'contain' }} priority />
+          </div>
         </div>
       </div>
     </footer>
