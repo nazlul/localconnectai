@@ -3,16 +3,21 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
-const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 const ChatBot = dynamic(() => import('./ChatBot'), { ssr: false })
 
 export default function Hero() {
   return (
     <>
       <section className="relative min-h-screen text-[#F1F5F9] py-27 px-6 md:py-35 mb-4 rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={0.2} />
-        </div>
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
         <div className="container mx-auto relative z-10 text-center mt-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 text-white drop-shadow-xl">
             Redefining Financial Integrity.

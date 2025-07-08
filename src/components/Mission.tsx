@@ -1,9 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import dynamic from 'next/dynamic'
-
-const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 export default function Mission() {
   const ref = useRef(null)
@@ -24,9 +21,15 @@ export default function Mission() {
       ref={ref}
       className="relative overflow-hidden py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={3.2} />
-      </div>
+      <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
       <div className="relative container mx-auto text-center">
         <h2
           className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text transition-opacity ${

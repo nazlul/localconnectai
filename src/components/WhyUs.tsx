@@ -1,9 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import dynamic from 'next/dynamic'
-
-const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 type Feature = {
   icon: string
@@ -78,9 +75,15 @@ export default function WhyUs() {
       id="differentiators"
       className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={0.2} />
-      </div>
+      <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
       <div
         className="text-center mb-16 animate-fade-slide-up"
         style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}

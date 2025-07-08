@@ -1,10 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import dynamic from 'next/dynamic'
 import React from 'react'
 
-const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 type Card = {
   icon: string
@@ -129,9 +127,15 @@ export default function Problem() {
       id="problem"
       className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl overflow-hidden shadow-2xl my-4 md:mx-4"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={0.2} />
-      </div>
+      <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
       <div className="container mx-auto relative">
         <FadeSlideUp
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 gradient-text bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text"

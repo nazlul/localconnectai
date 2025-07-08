@@ -1,12 +1,7 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import { useState, useEffect, useRef } from 'react'
 
-const Silk = dynamic(() => import('./ui/Silk'), {
-  ssr: false,
-  loading: () => <div className="absolute inset-0 bg-[#0d1f3d]" />,
-})
 
 function FadeSlideUp({
   children,
@@ -75,19 +70,15 @@ export default function Contact() {
       ref={ref}
       className="py-24 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {showSilk ? (
-          <Silk
-            speed={5}
-            scale={1.5}
-            color="#0d1f3d"
-            noiseIntensity={1.2}
-            rotation={0.2}
-          />
-        ) : (
-          <div className="w-full h-full bg-[#0d1f3d]" />
-        )}
-      </div>
+      <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
 
       <div className="relative container mx-auto text-center">
         <FadeSlideUp

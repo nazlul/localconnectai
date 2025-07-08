@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
-const Silk = dynamic(() => import('./ui/Silk'), { ssr: false })
 
 type Role = {
   title: string
@@ -83,9 +82,15 @@ export default function Join() {
       ref={ref}
       className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Silk speed={5} scale={1.5} color="#0d1f3d" noiseIntensity={1.2} rotation={3.2} />
-      </div>
+      <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-0" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 blur-3xl rounded-full animate-glow-subtle delay-2000" />
