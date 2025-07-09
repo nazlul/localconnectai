@@ -10,71 +10,40 @@ type Card = {
   description1: string
   description2: string
   color: string
-  ring: string
-  shadow: string
+  glow: string
 }
 
 const cards: Card[] = [
   {
-    icon: '🧠',
-    title: 'Predictive Anomaly Detection',
-    description1: 'Our AI learns complex patterns to detect suspicious activities with high accuracy.',
+    icon: '💸',
+    title: 'Billions Lost Annually',
+    description1:
+      'Financial crime, fraud, and illicit flows continue to drain the economy, impacting businesses and citizens alike, hindering national growth and development.',
     description2:
-      'Using deep learning, our AI continuously adapts to evolving criminal behavior by analyzing transaction metadata, velocity patterns, and behavioral biometrics. This system reduces false positives while catching nuanced fraud attempts previously missed by rule-based systems. Institutions benefit from higher detection rates and improved compliance workflows.',
-    color: 'border-cyan-500',
-    ring: 'hover:ring-cyan-400',
-    shadow: 'hover:shadow-cyan-500/40',
+      'Global financial crime results in annual losses exceeding trillions, impacting both public and private sectors. Businesses face growing costs for compliance and recovery, while citizens suffer economic and social consequences. These losses are further compounded by underreporting and inefficient systems struggling to keep up with emerging fraud techniques.',
+    color: 'border-red-700',
+    glow: 'hover:shadow-[0_0_20px_4px_rgba(220,38,38,0.7)]'
   },
   {
-    icon: '🕸️',
-    title: 'Network Intelligence (GNNs)',
-    description1: 'Uncover hidden criminal structures by analyzing complex networks.',
+    icon: '⚠️',
+    title: 'FATF Greylisting Burden',
+    description1:
+      "South Africa's greylisting pressures financial institutions to urgently enhance their AML/CTF capabilities, demanding robust and sophisticated solutions.",
     description2:
-      'Graph Neural Networks model transactional ecosystems as interconnected graphs, revealing links between shell accounts, mules, and laundering rings. Our engine visualizes these connections with risk weights and propagates intelligence across nodes, identifying fraud rings before they act. This capability is essential in targeting coordinated, large-scale financial crime.',
-    color: 'border-teal-500',
-    ring: 'hover:ring-teal-400',
-    shadow: 'hover:shadow-teal-500/40',
+      'Being greylisted by the Financial Action Task Force brings reputational risks, increased scrutiny, and global financial constraints. South African banks and institutions now face elevated compliance demands, slowing international transactions and increasing operating overheads until advanced monitoring and intelligence frameworks are adopted.',
+    color: 'border-yellow-700',
+    glow: 'hover:shadow-[0_0_20px_4px_rgba(202,138,4,0.7)]'
   },
   {
-    icon: '🔮',
-    title: 'Proactive Threat Simulation',
-    description1: 'Simulate evolving fraud and laundering techniques before they hit.',
+    icon: '👻',
+    title: 'Evolving Criminal Sophistication',
+    description1:
+      'Criminal networks adapt faster than traditional rule-based systems, leading to persistent missed threats and the rapid emergence of new, complex typologies.',
     description2:
-      'Generative AI models create synthetic threats based on emerging typologies, simulating next-gen attack vectors including AI-assisted laundering and cross-chain obfuscation. This proactive defense framework trains your team and systems against unseen threats, giving your institution a strategic head start against sophisticated adversaries.',
-    color: 'border-purple-500',
-    ring: 'hover:ring-purple-400',
-    shadow: 'hover:shadow-purple-500/40',
-  },
-  {
-    icon: '💡',
-    title: 'Explainable AI (XAI)',
-    description1: 'Get clear, human-readable explanations for every flagged anomaly.',
-    description2:
-      'Our XAI modules convert raw model predictions into readable justifications using natural language, graphs, and scoring metrics. Analysts can instantly understand “why” an alert was raised—ensuring trust, speed, and full auditability in high-stakes environments like KYC, AML, and regulatory reporting.',
-    color: 'border-emerald-500',
-    ring: 'hover:ring-emerald-400',
-    shadow: 'hover:shadow-emerald-500/40',
-  },
-  {
-    icon: '🤝',
-    title: 'Privacy-Preserving Collaboration',
-    description1: 'Enable secure collaboration without exposing private data.',
-    description2:
-      'Our blockchain-backed zero-knowledge layer enables multiple institutions to share signals, flags, and behavior patterns anonymously and immutably. Threats that cross borders or entities can now be tackled collectively, with no risk of data leaks or privacy violations.',
-    color: 'border-blue-500',
-    ring: 'hover:ring-blue-400',
-    shadow: 'hover:shadow-blue-500/40',
-  },
-  {
-    icon: '🎮',
-    title: 'Gamified Compliance',
-    description1: 'Make compliance intuitive, rewarding, and engaging.',
-    description2:
-      'Our platform introduces gamification into analyst workflows through point-based systems, progress bars, live leaderboards, and achievement badges. Designed to reduce fatigue and enhance performance, it transforms compliance from a checkbox task into an engaging and motivating challenge.',
-    color: 'border-pink-500',
-    ring: 'hover:ring-pink-400',
-    shadow: 'hover:shadow-pink-500/40',
-  },
+      'Cybercriminals now leverage AI, blockchain, and cross-border laundering to evade detection. Traditional defenses are reactive and slow, relying on outdated typologies. Without proactive AI-driven systems, institutions remain vulnerable to highly adaptive fraud rings, insider threats, and money-laundering networks that continuously change patterns.',
+    color: 'border-purple-700',
+    glow: 'hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.7)]'
+  }
 ]
 
 function FadeSlideUp({
@@ -160,7 +129,7 @@ export default function Problem() {
             <FadeSlideUp key={i} delay={0.4 + i * 0.2}>
               <div
                 onClick={() => setActiveCard(card)}
-                className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.shadow}`}
+                className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.glow}`}
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-300" />
                 <div className="relative z-10 h-[320px] flex flex-col justify-center">
