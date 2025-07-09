@@ -9,7 +9,7 @@ export default function Mission() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([entry]) => entry.isIntersecting && setShowAnim(true),
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     )
     if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
@@ -23,7 +23,7 @@ export default function Mission() {
     >
       <video
           className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg-3.mp4"
+          src="/bg-5.mp4"
           autoPlay
           muted
           loop

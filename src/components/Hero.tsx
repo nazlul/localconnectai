@@ -13,7 +13,7 @@ export default function Hero() {
       <section className="relative min-h-screen text-[#F1F5F9] py-27 px-6 md:py-35 mb-4 rounded-2xl overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg-3.mp4"
+          src="/bg-5.mp4"
           autoPlay
           muted
           loop

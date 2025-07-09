@@ -18,7 +18,7 @@ const roles: Role[] = [
     title: 'AML/Compliance Expert',
     icon: '⚖️',
     color: 'border-cyan-400',
-    bg: 'bg-cyan-400/10',
+    bg: 'bg-cyan-400/5',
     glow: '0 0 40px rgba(34,211,238,0.4)',
     description:
       'Deep FICA knowledge and a passion for ethical AI to uphold the highest legal and compliance standards.',

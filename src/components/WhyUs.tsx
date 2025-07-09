@@ -77,7 +77,7 @@ export default function WhyUs() {
     >
       <video
           className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg-3.mp4"
+          src="/bg-5.mp4"
           autoPlay
           muted
           loop
