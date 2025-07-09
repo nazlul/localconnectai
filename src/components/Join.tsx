@@ -161,8 +161,8 @@ export default function Join() {
               &times;
             </button>
             <div className="text-5xl mb-6">{activeRole.icon}</div>
-            <h3 className="text-4xl font-bold mb-4 text-white">{activeRole.title}</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{activeRole.detail}</p>
+            <h3 className="text-3xl font-bold mb-4 text-white">{activeRole.title}</h3>
+            <p className="text-gray-300 text-md leading-relaxed">{activeRole.detail}</p>
           </div>
         </div>
       )}

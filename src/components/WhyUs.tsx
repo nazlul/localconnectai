@@ -125,9 +125,9 @@ export default function WhyUs() {
             >
               &times;
             </button>
-            <div className="text-6xl mb-6">{activeFeature.icon}</div>
-            <h3 className="text-4xl font-bold mb-4 text-white">{activeFeature.title}</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{activeFeature.description2}</p>
+            <div className="text-5xl mb-6">{activeFeature.icon}</div>
+            <h3 className="text-3xl font-bold mb-4 text-white">{activeFeature.title}</h3>
+            <p className="text-gray-300 text-md leading-relaxed">{activeFeature.description2}</p>
           </div>
         </div>
       )}

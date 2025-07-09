@@ -16,7 +16,7 @@ export default function Navbar() {
   const closeMenu = () => setMobileMenuOpen(false)
 
   return (
-    <header className="bg-gray-950/60 text-white shadow-xl fixed w-full top-0 z-[999] border-b border-gray-800 backdrop-blur-sm bg-opacity-80">
+    <header className="bg-gray-950/60 text-white shadow-xl fixed w-full top-0 z-40 border-b border-gray-800 backdrop-blur-sm bg-opacity-80">
       <nav className="container mx-auto px-6 py-5 relative">
         <div className="flex justify-between items-center w-full">
           <Link href="#" className="flex items-center space-x-3">
