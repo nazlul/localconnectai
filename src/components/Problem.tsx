@@ -80,7 +80,7 @@ const cards: Card[] = [
 function FadeSlideUp({
   children,
   className = '',
-  threshold = 0.1,
+  threshold = 0.01,
   delay = 0,
 }: {
   children: React.ReactNode
@@ -91,20 +91,27 @@ function FadeSlideUp({
   const ref = React.useRef<HTMLDivElement>(null)
   const [visible, setVisible] = React.useState(false)
 
-  React.useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [threshold])
+ React.useEffect(() => {
+  const el = ref.current
+  if (!el) return
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setVisible(true)
+        observer.unobserve(el)
+      }
+    },
+    {
+      rootMargin: '0px 0px 50% 0px', 
+      threshold: 0,
+    }
+  )
+
+  observer.observe(el)
+  return () => observer.disconnect()
+}, [])
+
 
   return (
     <div
@@ -112,12 +119,18 @@ function FadeSlideUp({
       className={`${className} ${
         visible ? 'animate-fade-slide-up' : 'opacity-0 translate-y-8'
       }`}
-      style={{ animationDelay: `${delay}s`, animationFillMode: 'both' }}
+      style={{
+        animationDelay: `${delay}s`,
+        animationDuration: '0.2s',
+        animationFillMode: 'both',
+        animationTimingFunction: 'ease-out',
+      }}
     >
       {children}
     </div>
   )
 }
+
 
 export default function Problem() {
   const [activeCard, setActiveCard] = useState<Card | null>(null)

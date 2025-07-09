@@ -18,8 +18,8 @@ const roles: Role[] = [
     title: 'AML/Compliance Expert',
     icon: '⚖️',
     color: 'border-cyan-400',
-    bg: 'bg-cyan-400/20',
-    glow: '',
+    bg: 'bg-cyan-400/10',
+    glow: '0 0 40px rgba(34,211,238,0.4)',
     description:
       'Deep FICA knowledge and a passion for ethical AI to uphold the highest legal and compliance standards.',
     detail:
@@ -30,7 +30,7 @@ const roles: Role[] = [
     icon: '💾',
     color: 'border-teal-400',
     bg: 'bg-teal-950/20',
-    glow: '',
+    glow: '0 0 40px rgba(20,184,166,0.4)',
     description:
       'A master of scalable pipelines and real-time distributed systems to handle massive financial data.',
     detail:
@@ -41,7 +41,7 @@ const roles: Role[] = [
     icon: '🧠',
     color: 'border-purple-400',
     bg: 'bg-purple-950/20',
-    glow: '',
+    glow: '0 0 40px rgba(192,132,252,0.4)',
     description:
       'Expert in GNNs, XAI, and Generative AI to build models that not only predict but explain and adapt.',
     detail:
@@ -52,7 +52,7 @@ const roles: Role[] = [
     icon: '📈',
     color: 'border-pink-400',
     bg: 'bg-pink-950/20',
-    glow: '',
+    glow: '0 0 40px rgba(244,114,182,0.4)',
     description:
       'A visionary communicator to lead partnerships, adoption, and maximize impact across the continent.',
     detail:
@@ -112,12 +112,19 @@ export default function Join() {
             <div
               key={i}
               onClick={() => setActiveRole(role)}
-              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border cursor-pointer border-opacity-60 bg-opacity-20 transform transition-transform duration-300 hover:scale-105 ${
-                role.color
-              } ${role.bg} ${
+              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border cursor-pointer border-opacity-60 bg-opacity-20 transform transition duration-300 hover:scale-105 ${role.color} ${role.bg} ${
                 showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${200 * i}ms` }}
+              style={{
+                transitionDelay: `${200 * i}ms`,
+                transition: 'box-shadow 0.5s ease, transform 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = role.glow
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = ''
+              }}
             >
               <div className="text-6xl mb-6 text-center">{role.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
