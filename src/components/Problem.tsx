@@ -80,12 +80,10 @@ const cards: Card[] = [
 function FadeSlideUp({
   children,
   className = '',
-  threshold = 0.01,
   delay = 0,
 }: {
   children: React.ReactNode
   className?: string
-  threshold?: number
   delay?: number
 }) {
   const ref = React.useRef<HTMLDivElement>(null)
