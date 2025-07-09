@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="bg-cyan-400 group-hover:bg-cyan-600 text-[#000e4c] w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition text-2xl">
           <FontAwesomeIcon icon={faArrowUp} />
         </div>
-        <div className="mt-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-[#000e4c] px-4 py-1 rounded-full text-sm font-medium shadow transition">
+        <div className="mt-2 border-cyan-400 text-cyan-400 px-4 py-1 rounded-full text-sm font-medium shadow transition">
           Back to Top
         </div>
       </a>

@@ -48,7 +48,7 @@ export default function Hero() {
           href="https://wa.me/14155238886?text=join%20satisfied-inside"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-24 right-4 bg-[#25D366] hover:bg-[#1ebe57] rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg transition-all duration-300 overflow-x-hidden"
+          className="fixed bottom-24 right-5 bg-[#25D366] hover:bg-[#1ebe57] rounded-full w-14 h-14 flex items-center justify-center z-50 shadow-lg transition-all duration-300 overflow-x-hidden"
           aria-label="Chat on WhatsApp"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="text-white text-2xl sm:text-3xl" />
