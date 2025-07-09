@@ -61,7 +61,7 @@ export default function Footer() {
           <a href="https://x.com/LocalConnectAi" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="X">
             <FontAwesomeIcon icon={faXTwitter} />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100083309412412" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Facebook">
+          <a href="https://www.facebook.com/profile.php?id=61578035677995" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="Facebook">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a href="https://www.linkedin.com/company/localconnect-ai/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition" aria-label="LinkedIn">

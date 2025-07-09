@@ -107,15 +107,6 @@ export default function Problem() {
       id="problem"
       className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl overflow-hidden shadow-2xl my-4 md:mx-4"
     >
-      <video
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg-5.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        />
       <div className="container mx-auto relative">
         <FadeSlideUp
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 gradient-text bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text"

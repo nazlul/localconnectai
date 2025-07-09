@@ -62,15 +62,6 @@ export default function Contact() {
       ref={ref}
       className="py-24 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-        src="/bg-5.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
 
       <div className="relative container mx-auto text-center">
         <FadeSlideUp

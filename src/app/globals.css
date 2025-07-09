@@ -93,5 +93,36 @@ html, body {
 main {
   position: relative;
   z-index: 10;
-  background: transparent; /* or semi-transparent */
+  background: transparent;
+}
+
+@keyframes gradientScrollX {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(90deg, #0f172a, #121924, #130023, #0f1724, #0f172a);
+  background-size: 200% 100%;
+  animation: gradientScrollX 6s linear infinite;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+  
+
+.bg-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 10;
 }

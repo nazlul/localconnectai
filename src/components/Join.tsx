@@ -80,15 +80,6 @@ export default function Join() {
       ref={ref}
       className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 will-change-transform"
-        src="/bg-3.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
       <div className="relative z-10">
         <h2
           className={`text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text transition-opacity duration-700 ease-out ${
