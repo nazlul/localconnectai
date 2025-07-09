@@ -9,7 +9,6 @@ import {
 import {
   faWhatsapp,
   faLinkedinIn,
-  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 function FadeSlideUp({
