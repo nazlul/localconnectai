@@ -67,7 +67,7 @@ export default function Contact() {
         <FadeSlideUp
           threshold={0.1}
           delay={0.02}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 text-[#ffca88]"
         >
           Let&apos;s Connect & Build
         </FadeSlideUp>

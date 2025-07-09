@@ -79,7 +79,7 @@ export default function WhyUs() {
         className="text-center mb-16 animate-fade-slide-up"
         style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
       >
-        <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+        <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-[#ffca88]">
           What Makes Us Untouchable
         </h2>
       </div>

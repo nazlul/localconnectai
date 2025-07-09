@@ -82,7 +82,7 @@ export default function Join() {
     >
       <div className="relative z-10">
         <h2
-          className={`text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text transition-opacity duration-700 ease-out ${
+          className={`text-5xl lg:text-6xl font-bold mb-10 text-[#a2b0ff] transition-opacity duration-700 ease-out ${
             showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >

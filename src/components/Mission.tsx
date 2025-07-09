@@ -23,7 +23,7 @@ export default function Mission() {
     >
       <div className="relative container mx-auto text-center">
         <h2
-          className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text transition-opacity ${
+          className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 text-[#a2b0ff] transition-opacity ${
             showAnim ? 'animate-fade-slide-up' : 'opacity-0 translate-y-8'
           }`}
           style={showAnim ? { animationFillMode: 'forwards' } : undefined}

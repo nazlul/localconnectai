@@ -12,24 +12,26 @@ export default function Hero() {
     <>
       <section className="relative text-[#F1F5F9] py-20 px-6 md:py-28 rounded-2xl shadow-xl overflow-hidden">
         <div className="container mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight my-6 text-white drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight my-6 text-[#c0c9ff] drop-shadow-xl">
             Redefining Financial Integrity.
             <br />
             Unstoppable.
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl my-20 max-w-4xl mx-auto font-light">
+          <p className="text-lg md:text-xl lg:text-2xl my-20 max-w-4xl mx-auto font-light text-[#c0c9ff]">
             Using AI + blockchain to predict and stop financial crime. Our mission: safeguard South Africa’s economy.
           </p>
+
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
+           <Link
               href="#join-us"
-              className="bg-[#2DD4BF] hover:bg-[#26bfb2] text-gray-900 font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 transform hover:scale-105 shadow-xl"
+              className="glass-shimmer-btn"
             >
               Join the Mission
             </Link>
+
             <Link
               href="#solution"
-              className="bg-transparent border-2 border-[#2DD4BF] hover:bg-[#2DD4BF] text-white hover:text-gray-900 font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 transform hover:scale-105 shadow-lg"
+              className="glass-shimmer-btn"
             >
               Learn More
             </Link>

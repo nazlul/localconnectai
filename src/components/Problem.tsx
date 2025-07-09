@@ -109,15 +109,15 @@ export default function Problem() {
     >
       <div className="container mx-auto relative">
         <FadeSlideUp
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 gradient-text bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text"
-          delay={0.2}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-20 text-[#ffca88]"
+          delay={0.1}
         >
           The Problem: Traditional Defenses Are Falling
         </FadeSlideUp>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-10">
           {cards.map((card, i) => (
-            <FadeSlideUp key={i} delay={0.4 + i * 0.2}>
+            <FadeSlideUp key={i} delay={0.1 + i * 0.2}>
               <div
                 onClick={() => setActiveCard(card)}
                 className={`bg-gray-900/70 p-8 sm:p-10 rounded-3xl shadow-xl border ${card.color} relative overflow-x-hidden group transition-shadow duration-300 cursor-pointer ${card.glow}`}

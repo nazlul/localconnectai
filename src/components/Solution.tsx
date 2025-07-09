@@ -86,7 +86,7 @@ export default function Solution() {
     >
       <div className="container mx-auto text-center relative z-10">
         <h2
-          className="text-5xl lg:text-6xl font-bold mb-20 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text animate-fade-slide-up"
+          className="text-5xl lg:text-6xl font-bold mb-20 text-[#a2b0ff] animate-fade-slide-up"
           style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
         >
           Our Solution: Intelligent, Proactive, Connected AI
