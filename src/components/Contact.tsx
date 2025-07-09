@@ -1,7 +1,16 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faEnvelope,
+  faPhoneVolume,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faWhatsapp,
+  faLinkedinIn,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons'
 
 function FadeSlideUp({
   children,
@@ -55,14 +64,14 @@ export default function Contact() {
       className="py-24 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
     >
       <video
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/bg-5.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        />
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        src="/bg-5.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      />
 
       <div className="relative container mx-auto text-center">
         <FadeSlideUp
@@ -97,7 +106,7 @@ export default function Contact() {
               </h3>
               <div className="space-y-4">
                 <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <i className="fas fa-envelope text-cyan-400 text-lg md:text-2xl mr-3" />
+                  <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=siyabongakhumalo602@gmail.com"
                     target="_blank"
@@ -108,13 +117,13 @@ export default function Contact() {
                   </a>
                 </p>
                 <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <i className="fa-solid fa-phone-volume text-cyan-400 text-2xl mr-3" />
+                  <FontAwesomeIcon icon={faPhoneVolume} className="text-cyan-400 text-2xl mr-3" />
                   <a href="tel:+27641356433" className="hover:text-cyan-400 transition">
                     +27 6413 56433
                   </a>
                 </p>
                 <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <i className="fab fa-whatsapp text-cyan-400 text-2xl mr-3" />
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
                   <a
                     href="https://wa.me/27641356433"
                     target="_blank"
@@ -130,7 +139,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-md mt-6"
                 >
-                  <i className="fab fa-linkedin-in mr-3" /> LinkedIn
+                  <FontAwesomeIcon icon={faLinkedinIn} className="mr-3" /> LinkedIn
                 </a>
               </div>
             </div>
@@ -154,10 +163,10 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-md"
               >
-                <i className="fas fa-envelope mr-3" /> Email Us
+                <FontAwesomeIcon icon={faEnvelope} className="mr-3" /> Email Us
               </a>
               <p className="text-xl text-gray-300 flex items-center justify-center mt-10">
-                <i className="fab fa-whatsapp text-cyan-400 text-2xl mr-3" />
+                <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
                 <a
                   href="https://wa.me/27641356433"
                   target="_blank"
