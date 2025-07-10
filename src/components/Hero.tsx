@@ -14,20 +14,19 @@ export default function Hero() {
       <section className="relative text-[#F1F5F9] py-24 px-6 md:py-28 overflow-hidden">
         <div className="container mx-auto relative z-10 text-center">
           <SplitText
-  text="Redefining Financial Integrity. Unstoppable."
-  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-[#c0c9ff] mt-6 sm:mt-10 leading-snug tracking-tight px-4 sm:px-0 max-w-[90vw] sm:max-w-3xl mx-auto"
-  delay={20}
-  duration={0.5}
-  ease="power3.out"
-  splitType="words"
-  from={{ opacity: 0, y: 40 }}
-  to={{ opacity: 1, y: 0 }}
-  threshold={0.1}
-  rootMargin="-100px"
-  textAlign="center"
-/>
-
-          <p className="text-lg md:text-xl lg:text-2xl my-20 max-w-4xl mx-auto font-light text-[#c0c9ff]">
+            text="Redefining Financial Integrity. Unstoppable."
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-center text-[#c0c9ff] mt-6 sm:mt-10 leading-snug tracking-tight px-4 sm:px-0 max-w-[90vw] sm:max-w-4xl mx-auto"
+            delay={20}
+            duration={0.5}
+            ease="power3.out"
+            splitType="words"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-5xl my-20 mx-auto font-light text-[#c0c9ff]">
             Using AI + blockchain to predict and stop financial crime. Our mission: safeguard South Africa’s economy.
           </p>
 
