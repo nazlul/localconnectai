@@ -82,7 +82,7 @@ export default function Solution() {
   return (
     <section
       id="solution"
-      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 overflow-hidden"
+      className="relative py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 overflow-hidden glass-bg"
     >
       <div className="container mx-auto text-center relative z-10">
         <h2

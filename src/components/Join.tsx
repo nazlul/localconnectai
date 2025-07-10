@@ -78,7 +78,7 @@ export default function Join() {
     <section
       id="join-us"
       ref={ref}
-      className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center"
+      className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center glass-bg"
     >
       <div className="relative z-10">
         <h2

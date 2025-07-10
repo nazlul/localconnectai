@@ -73,7 +73,7 @@ export default function WhyUs() {
   return (
     <section
       id="why-us"
-      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden"
+      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden glass-bg"
     >
       <div
         className="text-center mb-16 animate-fade-slide-up"

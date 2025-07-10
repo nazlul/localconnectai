@@ -19,7 +19,7 @@ export default function Mission() {
     <section
       id="mission"
       ref={ref}
-      className="relative overflow-hidden py-24 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4"
+      className="relative overflow-hidden py-18 px-6 text-[#b8b8b8] rounded-2xl shadow-xl my-4 md:mx-4 glass-bg"
     >
       <div className="relative container mx-auto text-center">
         <h2

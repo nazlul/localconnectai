@@ -105,7 +105,7 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl overflow-hidden shadow-2xl my-4 md:mx-4"
+      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl overflow-hidden shadow-2xl my-4 md:mx-4 glass-bg"
     >
       <div className="container mx-auto relative">
         <FadeSlideUp

@@ -60,7 +60,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-24 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative"
+      className="py-20 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative glass-bg"
     >
 
       <div className="relative container mx-auto text-center">
