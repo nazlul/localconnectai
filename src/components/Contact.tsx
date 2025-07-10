@@ -2,14 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faEnvelope,
-  faPhoneVolume,
-} from '@fortawesome/free-solid-svg-icons'
-import {
-  faWhatsapp,
-  faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 function FadeSlideUp({
   children,
@@ -43,9 +37,7 @@ function FadeSlideUp({
   return (
     <div
       ref={ref}
-      className={`${className} ${
-        visible ? `animate-fade-slide-up` : 'opacity-0 translate-y-8'
-      }`}
+      className={`${className} ${visible ? 'animate-fade-slide-up' : 'opacity-0 translate-y-8'}`}
       style={{ animationDelay: `${delay}s` }}
     >
       {children}
@@ -62,7 +54,6 @@ export default function Contact() {
       ref={ref}
       className="py-20 px-6 text-[#F1F5F9] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center relative glass-bg"
     >
-
       <div className="relative container mx-auto text-center">
         <FadeSlideUp
           threshold={0.1}
@@ -83,13 +74,49 @@ export default function Contact() {
           passion can help shape the future of financial integrity.
         </FadeSlideUp>
 
-        <div className="flex flex-col md:flex-row justify-center items-stretch space-y-10 md:space-y-0 md:space-x-12">
+        <div className="mb-14">
           <FadeSlideUp
             threshold={0.1}
             delay={0.02}
-            className="text-center bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
+            className="bg-gray-800/70 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group max-w-3xl mx-auto"
           >
-            <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
+            <div className="absolute inset-0 bg-cyan-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
+            <div className="relative z-10">
+              <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">General Inquiries</h3>
+              <p className="text-xl mb-8 text-gray-300 leading-relaxed">
+                For all other queries, potential collaborations, or media inquiries,
+                please reach out via our general contact email.
+              </p>
+              <a
+                href="mailto:info@localconnectai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-md"
+              >
+                <FontAwesomeIcon icon={faEnvelope} className="mr-3" /> Email Us
+              </a>
+              <p className="text-xl text-gray-300 flex items-center justify-center mt-10">
+                <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
+                <a
+                  href="https://wa.me/27641356433"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-400 transition"
+                >
+                  WhatsApp Us
+                </a>
+              </p>
+            </div>
+          </FadeSlideUp>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <FadeSlideUp
+            threshold={0.1}
+            delay={0.03}
+            className="bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
+          >
+            <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
               <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">
                 Siyabonga Ayanda Khumalo (Founder)
@@ -99,8 +126,6 @@ export default function Contact() {
                   <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=siyabongakhumalo602@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="hover:text-cyan-400 transition"
                   >
                     siyabongakhumalo602@gmail.com
@@ -137,35 +162,50 @@ export default function Contact() {
 
           <FadeSlideUp
             threshold={0.1}
-            delay={0.02}
-            className="text-center bg-gray-800/70 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group"
+            delay={0.04}
+            className="bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
           >
-            <div className="absolute inset-0 bg-cyan-500 opacity-10 blur-xl transition duration-500 group-hover:opacity-15 z-0" />
+            <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
-              <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">General Inquiries</h3>
-              <p className="text-xl mb-8 text-gray-300 leading-relaxed">
-                For all other queries, potential collaborations, or media inquiries,
-                please reach out via our general contact email.
-              </p>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@localconnectai.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-md"
-              >
-                <FontAwesomeIcon icon={faEnvelope} className="mr-3" /> Email Us
-              </a>
-              <p className="text-xl text-gray-300 flex items-center justify-center mt-10">
-                <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
+              <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">
+                Ankur Kumar <br /> (Cofounder)
+              </h3>
+              <div className="space-y-4">
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=ankurkumar102003@gmail.com"
+                    className="hover:text-cyan-400 transition"
+                  >
+                    ankurkumar102003@gmail.com
+                  </a>
+                </p>
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faPhoneVolume} className="text-cyan-400 text-2xl mr-3" />
+                  <a href="tel:+919473314831" className="hover:text-cyan-400 transition">
+                    +91 94733 14831
+                  </a>
+                </p>
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
+                  <a
+                    href="https://wa.me/919473314831"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition"
+                  >
+                    WhatsApp Me
+                  </a>
+                </p>
                 <a
-                  href="https://wa.me/27641356433"
+                  href="https://www.linkedin.com/in/ankur-kumar-828591250"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition"
+                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-md mt-6"
                 >
-                  WhatsApp Us
+                  <FontAwesomeIcon icon={faLinkedinIn} className="mr-3" /> LinkedIn
                 </a>
-              </p>
+              </div>
             </div>
           </FadeSlideUp>
         </div>
