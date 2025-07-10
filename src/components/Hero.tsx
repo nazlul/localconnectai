@@ -10,7 +10,7 @@ const ChatBot = dynamic(() => import('./ChatBot'), { ssr: false })
 export default function Hero() {
   return (
     <>
-      <section className="relative text-[#F1F5F9] py-20 px-6 md:py-28 rounded-2xl shadow-xl overflow-hidden">
+      <section className="relative text-[#F1F5F9] py-20 px-6 md:py-28 overflow-hidden">
         <div className="container mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight my-6 text-[#c0c9ff] drop-shadow-xl">
             Redefining Financial Integrity.
