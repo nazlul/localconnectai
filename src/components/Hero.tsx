@@ -4,19 +4,28 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import SplitText from "./ui/Text";
 
 const ChatBot = dynamic(() => import('./ChatBot'), { ssr: false })
 
 export default function Hero() {
   return (
     <>
-      <section className="relative text-[#F1F5F9] py-20 px-6 md:py-28 overflow-hidden">
+      <section className="relative text-[#F1F5F9] py-24 px-6 md:py-28 overflow-hidden">
         <div className="container mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight my-6 text-[#c0c9ff] drop-shadow-xl">
-            Redefining Financial Integrity.
-            <br />
-            Unstoppable.
-          </h1>
+          <SplitText
+            text="Redefining Financial Integrity. Unstoppable."
+            className="text-6xl font-semibold text-center text-[#c0c9ff] mt-10 leading-snug"
+            delay={20}
+            duration={0.5}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-lg md:text-xl lg:text-2xl my-20 max-w-4xl mx-auto font-light text-[#c0c9ff]">
             Using AI + blockchain to predict and stop financial crime. Our mission: safeguard South Africa’s economy.
           </p>

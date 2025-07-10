@@ -75,74 +75,76 @@ export default function Join() {
   }, [])
 
   return (
-    <section
-      id="join-us"
-      ref={ref}
-      className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center glass-bg"
-    >
-      <div className="relative z-10">
-        <h2
-          className={`text-5xl lg:text-6xl font-bold mb-10 text-[#a2b0ff] transition-opacity duration-700 ease-out ${
-            showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          Dare to Build a Legacy? Join the Revolution.
-        </h2>
+    <>
+      <section
+        id="join-us"
+        ref={ref}
+        className="relative py-24 px-6 text-[#b8b8b8] overflow-hidden rounded-2xl shadow-xl my-4 md:mx-4 text-center glass-bg"
+      >
+        <div className="relative z-10">
+          <h2
+            className={`text-5xl lg:text-6xl font-bold mb-10 text-[#a2b0ff] transition-opacity duration-700 ease-out ${
+              showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            Dare to Build a Legacy? Join the Revolution.
+          </h2>
 
-        <p
-          className={`text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light transition-opacity duration-700 ease-out ${
-            showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-          style={{ transitionDelay: '150ms' }}
-        >
-          LocalConnect AI isn&apos;t just a company — it&apos;s a mission to secure South Africa&apos;s financial future. We&apos;re building a founding team ready to lead a global transformation.
-        </p>
+          <p
+            className={`text-xl md:text-2xl lg:text-3xl mb-16 max-w-5xl mx-auto opacity-90 font-light transition-opacity duration-700 ease-out ${
+              showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: '150ms' }}
+          >
+            LocalConnect AI isn&apos;t just a company — it&apos;s a mission to secure South Africa&apos;s financial future. We&apos;re building a founding team ready to lead a global transformation.
+          </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 mb-16">
-          {roles.map((role, i) => (
-            <div
-              key={i}
-              onClick={() => setActiveRole(role)}
-              className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border cursor-pointer border-opacity-60 bg-opacity-20 transform transition duration-300 hover:scale-105 ${role.color} ${role.bg} ${
-                showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{
-                transitionDelay: `${200 * i}ms`,
-                transition: 'box-shadow 0.5s ease, transform 0.3s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = role.glow
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = ''
-              }}
-            >
-              <div className="text-6xl mb-6 text-center">{role.icon}</div>
-              <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
-              <p className="text-gray-300 leading-relaxed font-light">{role.description}</p>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 mb-16">
+            {roles.map((role, i) => (
+              <div
+                key={i}
+                onClick={() => setActiveRole(role)}
+                className={`text-[#F1F5F9] p-10 rounded-3xl shadow-xl border cursor-pointer border-opacity-60 bg-opacity-20 transform transition duration-300 hover:scale-105 ${role.color} ${role.bg} ${
+                  showAnim ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{
+                  transitionDelay: `${200 * i}ms`,
+                  transition: 'box-shadow 0.5s ease, transform 0.3s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = role.glow
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = ''
+                }}
+              >
+                <div className="text-6xl mb-6 text-center">{role.icon}</div>
+                <h3 className="text-2xl font-bold mb-4">{role.title}</h3>
+                <p className="text-gray-300 leading-relaxed font-light">{role.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xl md:text-2xl mb-12 opacity-90 font-light">
+            This is a rare equity opportunity to co-create a generational venture. Let&apos;s build the AI guardrails for an entire continent.
+          </p>
+
+          <Link
+            href="#contact"
+            className="gradient-hover rounded-full py-4 px-8 sm:py-6 sm:px-16 text-xl sm:text-2xl font-bold shadow-xl inline-block"
+          >
+            Connect with Siyabonga
+          </Link>
         </div>
-
-        <p className="text-xl md:text-2xl mb-12 opacity-90 font-light">
-          This is a rare equity opportunity to co-create a generational venture. Let&apos;s build the AI guardrails for an entire continent.
-        </p>
-
-        <Link
-          href="#contact"
-          className="gradient-hover rounded-full py-4 px-8 sm:py-6 sm:px-16 text-xl sm:text-2xl font-bold shadow-xl inline-block"
-        >
-          Connect with Siyabonga
-        </Link>
-      </div>
+      </section>
 
       {activeRole && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-[9999]"
           onClick={() => setActiveRole(null)}
         >
           <div
-            className="bg-gray-900 p-10 rounded-3xl max-w-3xl w-full mx-6 relative text-left border-l-4 border-cyan-500"
+            className="bg-gray-900 p-10 rounded-3xl max-w-3xl w-full mx-6 relative text-left border-l-4 border-cyan-500 max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -157,6 +159,6 @@ export default function Join() {
           </div>
         </div>
       )}
-    </section>
+    </>
   )
 }

@@ -71,43 +71,46 @@ export default function WhyUs() {
   const [activeFeature, setActiveFeature] = useState<Feature | null>(null)
 
   return (
-    <section
-      id="why-us"
-      className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden glass-bg"
-    >
-      <div
-        className="text-center mb-16 animate-fade-slide-up"
-        style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
+    <>
+      <section
+        id="why-us"
+        className="relative py-24 px-6 text-[#F1F5F9] rounded-2xl shadow-xl animate-fade-in-scale-up my-4 md:mx-4 overflow-hidden glass-bg"
       >
-        <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-[#ffca88]">
-          What Makes Us Untouchable
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative">
-        {features.map((f, i) => (
-          <div
-            key={i}
-            onClick={() => setActiveFeature(f)}
-            className="bg-gray-900/70 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300 animate-fade-slide-up"
-            style={{ animationDelay: `${0.2 + i * 0.15}s`, animationFillMode: 'both' } as React.CSSProperties}
-          >
-            <div className="flex items-start space-x-4">
-              <div className={`text-4xl ${f.color}`}>{f.icon}</div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">{f.title}</h3>
-                <p className="text-gray-300 text-base font-light leading-relaxed">{f.description1}</p>
+        <div
+          className="text-center mb-16 animate-fade-slide-up"
+          style={{ animationDelay: '0.1s', animationFillMode: 'both' } as React.CSSProperties}
+        >
+          <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-[#ffca88]">
+            What Makes Us Untouchable
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative">
+          {features.map((f, i) => (
+            <div
+              key={i}
+              onClick={() => setActiveFeature(f)}
+              className="bg-gray-900/70 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.15)] cursor-pointer transition duration-300 animate-fade-slide-up"
+              style={{ animationDelay: `${0.2 + i * 0.15}s`, animationFillMode: 'both' } as React.CSSProperties}
+            >
+              <div className="flex items-start space-x-4">
+                <div className={`text-4xl ${f.color}`}>{f.icon}</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{f.title}</h3>
+                  <p className="text-gray-300 text-base font-light leading-relaxed">{f.description1}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
+
       {activeFeature && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-[9999]"
           onClick={() => setActiveFeature(null)}
         >
           <div
-            className="bg-gray-900 p-10 rounded-3xl max-w-3xl w-full mx-6 relative text-left border-l-4 border-orange-500"
+            className="bg-gray-900 p-10 rounded-3xl max-w-3xl w-full mx-6 relative text-left border-l-4 border-orange-500 overflow-y-auto max-h-[90vh]"
             onClick={e => e.stopPropagation()}
           >
             <button
@@ -122,6 +125,6 @@ export default function WhyUs() {
           </div>
         </div>
       )}
-    </section>
+    </>
   )
 }
