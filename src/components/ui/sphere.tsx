@@ -90,9 +90,12 @@ function Stars() {
       baseSizeArray.push(baseSize)
       sizeArray.push(baseSize)
 
-      item.isUser
-        ? colorArray.push(0.3, 0.5, 1.0)
-        : colorArray.push(1.0, 1.0, 1.0)
+      if (item.isUser) {
+        colorArray.push(0.3, 0.5, 1.0)
+      } else {
+        colorArray.push(1.0, 1.0, 1.0)
+      }
+
     })
 
     return [
