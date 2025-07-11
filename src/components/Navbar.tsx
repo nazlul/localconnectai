@@ -57,11 +57,11 @@ export default function Navbar() {
           </button>
 
           <ul className="hidden lg:flex space-x-10 text-lg font-medium">
-            <li><a href="#mission" className="hover:text-blue-500 transition">Our Mission</a></li>
-            <li><a href="#solution" className="hover:text-blue-500 transition">The Solution</a></li>
-            <li><a href="#why-us" className="hover:text-blue-500 transition">Why Us</a></li>
-            <li><a href="#join-us" className="hover:text-blue-500 transition">Join Us</a></li>
-            <li><a href="#contact" className="hover:text-blue-500 transition">Contact</a></li>
+            <li><a href="#mission" className="hover:text-[#a2b0ff] transition">Our Mission</a></li>
+            <li><a href="#solution" className="hover:text-[#a2b0ff] transition">The Solution</a></li>
+            <li><a href="#why-us" className="hover:text-[#a2b0ff] transition">Why Us</a></li>
+            <li><a href="#join-us" className="hover:text-[#a2b0ff] transition">Join Us</a></li>
+            <li><a href="#contact" className="hover:text-[#a2b0ff] transition">Contact</a></li>
           </ul>
         </div>
 
@@ -71,11 +71,11 @@ export default function Navbar() {
           }`}
         >
           <ul className="flex flex-col items-center space-y-4 text-lg py-6 transition-opacity duration-300">
-            <li><a onClick={closeMenu} href="#mission" className="hover:text-blue-500">Our Mission</a></li>
-            <li><a onClick={closeMenu} href="#solution" className="hover:text-blue-500">The Solution</a></li>
-            <li><a onClick={closeMenu} href="#why-us" className="hover:text-blue-500">Why Us</a></li>
-            <li><a onClick={closeMenu} href="#join-us" className="hover:text-blue-500">Join Us</a></li>
-            <li><a onClick={closeMenu} href="#contact" className="hover:text-blue-500">Contact</a></li>
+            <li><a onClick={closeMenu} href="#mission" className="hover:text-[#a2b0ff]">Our Mission</a></li>
+            <li><a onClick={closeMenu} href="#solution" className="hover:text-[#a2b0ff]">The Solution</a></li>
+            <li><a onClick={closeMenu} href="#why-us" className="hover:text-[#a2b0ff]">Why Us</a></li>
+            <li><a onClick={closeMenu} href="#join-us" className="hover:text-[#a2b0ff]">Join Us</a></li>
+            <li><a onClick={closeMenu} href="#contact" className="hover:text-[#a2b0ff]">Contact</a></li>
           </ul>
         </div>
       </nav>

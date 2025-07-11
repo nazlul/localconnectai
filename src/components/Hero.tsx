@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SplitText from "./ui/Text";
+import Sphere from './ui/sphere'
 
 const ChatBot = dynamic(() => import('./ChatBot'), { ssr: false })
 
@@ -12,6 +13,7 @@ export default function Hero() {
   return (
     <>
       <section className="relative text-[#F1F5F9] py-24 px-6 md:py-28 overflow-hidden">
+        <Sphere />
         <div className="container mx-auto relative z-10 text-center">
           <SplitText
             text="Redefining Financial Integrity. Unstoppable."
