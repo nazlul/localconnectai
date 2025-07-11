@@ -88,7 +88,7 @@ export default function Contact() {
                 please reach out via our general contact email.
               </p>
               <a
-                href="mailto:info@localconnectai.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@localconnectai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-md"
@@ -103,7 +103,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="hover:text-cyan-400 transition"
                 >
-                  WhatsApp Us
+                  Message Us on WhatsApp
                 </a>
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="hover:text-cyan-400 transition"
                   >
-                    WhatsApp Me
+                    Message on WhatsApp
                   </a>
                 </p>
                 <a
@@ -194,7 +194,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="hover:text-cyan-400 transition"
                   >
-                    WhatsApp Me
+                    Message on WhatsApp
                   </a>
                 </p>
                 <a
