@@ -74,11 +74,62 @@ export default function Contact() {
           passion can help shape the future of financial integrity.
         </FadeSlideUp>
 
-        <div className="mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          
+
+          <FadeSlideUp
+            threshold={0.1}
+            delay={0.03}
+            className="bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
+          >
+            <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
+            <div className="relative z-10">
+              <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">
+                Siyabonga Ayanda Khumalo (Founder)
+              </h3>
+              <div className="space-y-4">
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=siyabongakhumalo602@gmail.com"
+                    className="hover:text-cyan-400 transition text-[1rem]"
+                  >
+                    siyabongakhumalo602@gmail.com
+                  </a>
+                </p>
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faPhoneVolume} className="text-cyan-400 text-2xl mr-3" />
+                  <a href="tel:+27641356433" className="hover:text-cyan-400 transition text-[1rem]">
+                    +27 6413 56433
+                  </a>
+                </p>
+                <p className="text-xl text-gray-300 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
+                  <a
+                    href="https://wa.me/27641356433"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition text-[1.1rem]"
+                  >
+                    Message on WhatsApp
+                  </a>
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/siyabonga-khumalo-7b9a25254"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-md mt-6"
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} className="mr-3" /> LinkedIn
+                </a>
+              </div>
+            </div>
+          </FadeSlideUp>
+
           <FadeSlideUp
             threshold={0.1}
             delay={0.02}
-            className="bg-gray-800/70 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group max-w-3xl mx-auto"
+            className="bg-gray-800/70 p-10 rounded-3xl shadow-xl border border-cyan-500 hover:shadow-[0_0_25px_5px_rgba(6,182,212,0.5)] transition duration-300 relative overflow-x-hidden group"
           >
             <div className="absolute inset-0 bg-cyan-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
             <div className="relative z-10">
@@ -101,62 +152,11 @@ export default function Contact() {
                   href="https://wa.me/27641356433"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition"
+                  className="hover:text-cyan-400 transition text-[1.1rem]"
                 >
-                  Message Us on WhatsApp
+                  WhatsApp Us
                 </a>
               </p>
-            </div>
-          </FadeSlideUp>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <FadeSlideUp
-            threshold={0.1}
-            delay={0.03}
-            className="bg-gray-800/70 hover:shadow-[0_0_25px_5px_rgba(99,102,241,0.5)] transition duration-300 p-10 rounded-3xl shadow-xl border border-indigo-600 relative overflow-x-hidden group"
-          >
-            <div className="absolute inset-0 bg-indigo-500 opacity-10 blur-xl transition duration-300 group-hover:opacity-15 z-0" />
-            <div className="relative z-10">
-              <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">
-                Siyabonga Ayanda Khumalo (Founder)
-              </h3>
-              <div className="space-y-4">
-                <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
-                  <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=siyabongakhumalo602@gmail.com"
-                    className="hover:text-cyan-400 transition"
-                  >
-                    siyabongakhumalo602@gmail.com
-                  </a>
-                </p>
-                <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <FontAwesomeIcon icon={faPhoneVolume} className="text-cyan-400 text-2xl mr-3" />
-                  <a href="tel:+27641356433" className="hover:text-cyan-400 transition">
-                    +27 6413 56433
-                  </a>
-                </p>
-                <p className="text-xl text-gray-300 flex items-center justify-center">
-                  <FontAwesomeIcon icon={faWhatsapp} className="text-cyan-400 text-2xl mr-3" />
-                  <a
-                    href="https://wa.me/27641356433"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-cyan-400 transition"
-                  >
-                    Message on WhatsApp
-                  </a>
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/siyabonga-khumalo-7b9a25254"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-md mt-6"
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn} className="mr-3" /> LinkedIn
-                </a>
-              </div>
             </div>
           </FadeSlideUp>
 
@@ -175,14 +175,14 @@ export default function Contact() {
                   <FontAwesomeIcon icon={faEnvelope} className="text-cyan-400 text-lg md:text-2xl mr-3" />
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=ankurkumar102003@gmail.com"
-                    className="hover:text-cyan-400 transition"
+                    className="hover:text-cyan-400 transition text-[1rem]"
                   >
                     ankurkumar102003@gmail.com
                   </a>
                 </p>
                 <p className="text-xl text-gray-300 flex items-center justify-center">
                   <FontAwesomeIcon icon={faPhoneVolume} className="text-cyan-400 text-2xl mr-3" />
-                  <a href="tel:+919473314831" className="hover:text-cyan-400 transition">
+                  <a href="tel:+919473314831" className="hover:text-cyan-400 transition text-[1rem]">
                     +91 94733 14831
                   </a>
                 </p>
@@ -192,7 +192,7 @@ export default function Contact() {
                     href="https://wa.me/919473314831"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-cyan-400 transition"
+                    className="hover:text-cyan-400 transition text-[1.1rem]"
                   >
                     Message on WhatsApp
                   </a>
