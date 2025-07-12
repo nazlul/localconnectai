@@ -218,14 +218,16 @@ export default function Sphere() {
   )
 
   return (
-    <>
-      <div className="absolute inset-0 w-full h-screen z-0 flex items-center justify-center">
+    <div className="absolute top-0 left-0 w-full h-[100dvh] max-h-[1000px] flex items-center justify-center overflow-hidden z-0">
+      <div className="w-full h-full">
         <Canvas camera={{ position: [0, 0, baseZoom], fov: 60 }}>
           <ambientLight intensity={0.5} />
           <Stars />
           <CameraController targetZoom={targetZoom} />
         </Canvas>
       </div>
-    </>
+    </div>
   )
+
+
 }

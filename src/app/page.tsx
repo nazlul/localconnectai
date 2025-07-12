@@ -25,16 +25,19 @@ export default function HomePage() {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
 
-      <div className="relative z-10">
-        <Navbar />
-        <Hero />
-        <LazySection><Mission /></LazySection>
-        <LazySection><Problem /></LazySection>
-        <LazySection><Solution /></LazySection>
-        <LazySection><WhyUs /></LazySection>
-        <LazySection><Join /></LazySection>
-        <LazySection><Contact /></LazySection>
-        <Footer />
+      <div className="relative z-10 flex justify-center">
+         <Navbar />
+        <div className="w-full max-w-[1440px]">
+         
+          <Hero />
+          <LazySection><Mission /></LazySection>
+          <LazySection><Problem /></LazySection>
+          <LazySection><Solution /></LazySection>
+          <LazySection><WhyUs /></LazySection>
+          <LazySection><Join /></LazySection>
+          <LazySection><Contact /></LazySection>
+          <Footer />
+        </div>
       </div>
     </div>
   )
