@@ -16,10 +16,9 @@ This README provides a **comprehensive guide** to the architecture, tech stack, 
 * AI-powered **Dialogflow chatbot** integration
 * Animated **3D particle sphere** using **React Three Fiber**
 * Section-based lazy loading for performance
-* **Custom cursor** with color adaptation
 * Tailwind-based responsive design
 * Styled hero section with 3D shaders and animated background
-* Fully responsive mobile-first layout
+* Fully responsive layout
 
 ---
 
@@ -29,15 +28,15 @@ This README provides a **comprehensive guide** to the architecture, tech stack, 
 localconnectai/
 ├── app/                  # Next.js App Router pages and layout
 │   ├── page.tsx         # HomePage component with all sections
-├── components/          # All reusable and feature components
-│   ├── Hero.tsx         # Hero section with 3D canvas
+├── components/          # All sections and components
+│   ├── Hero.tsx         # Hero section 
 │   ├── Sphere.tsx       # R3F 3D particle sphere
-│   ├── Mission.tsx      # Lazy section content
+│   ├── Mission.tsx      # Mission Content
 │   ├── ...              # Join, Contact, WhyUs, etc.
-├── public/              # Static assets (images, shaders, video)
-├──  globals.css         # Tailwind + global.css + cursor styles
+├── public/              # Static assets 
+├──  globals.css         # global.css 
 ├── lib/                 # FontAwesome and utility scripts
-├── README.md            # You are here
+├── README.md            
 ```
 
 ---
@@ -46,7 +45,7 @@ localconnectai/
 
 | Tech                  | Purpose                              |
 | --------------------- | ------------------------------------ |
-| **Next.js 14**        | App router, routing, SSR/CSR hybrid  |
+| **Next.js**           | App router, routing, SSR/CSR hybrid  |
 | **Tailwind CSS**      | Utility-first styling                |
 | **React Three Fiber** | Declarative 3D graphics rendering    |
 | **Framer Motion**     | Entrance animations + scroll effects |
@@ -92,13 +91,13 @@ cd localconnectai
 ### 2. Install Dependencies
 
 ```bash
-pnpm install  # or yarn / npm
+npm install  # or yarn / pnpm
 ```
 
 ### 3. Run Locally
 
 ```bash
-pnpm dev
+npm dev
 ```
 
 ### 4. Deploy to Vercel
@@ -121,10 +120,10 @@ pnpm dev
 
 ## 📊 Performance & Responsiveness
 
-* All sections are responsive from `sm` to `2xl`
+* All sections are responsive 
 * Scroll performance is GPU-accelerated
 * Lazy-loading avoids unnecessary hydration
-* 3D components scaled to remain centered on zoom or resize
+* Components scaled to remain centered on zoom or resize
 
 ---
 
