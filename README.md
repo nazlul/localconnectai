@@ -130,9 +130,9 @@ pnpm dev
 
 ## 📏 Hero Section
 
-```md
+
 ![HeroSection](hero.png)
-```
+
 
 ---
 
