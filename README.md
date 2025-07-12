@@ -145,7 +145,6 @@ npm dev
 
 ## 🙏 Credits & Attribution
 
-* Developed by [Nazlul Rizan](https://github.com/nazlul)
 * 3D animations via [Three.js](https://threejs.org/), [R3F](https://docs.pmnd.rs)
 * Chatbot by [Dialogflow Messenger](https://cloud.google.com/dialogflow)
 * Hosting via [Vercel](https://vercel.com/)
