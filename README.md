@@ -131,7 +131,7 @@ pnpm dev
 ## 📏 Hero Section
 
 ```md
-![HeroSection](public/home.png)
+![HeroSection](/home.png)
 ```
 
 ---
