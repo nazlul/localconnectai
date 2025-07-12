@@ -131,7 +131,7 @@ pnpm dev
 ## 📏 Hero Section
 
 ```md
-![HeroSection](https://raw.githubusercontent.com/nazlul/localconnectai/main/public/home.png?raw=true)
+![HeroSection](hero.png)
 ```
 
 ---
